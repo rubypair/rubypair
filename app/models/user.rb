@@ -13,7 +13,7 @@ class User
   embeds_one :profile
 
   after_create do
-    create_profile(interested_in_remote: true)
+    create_profile
   end
 end
 
