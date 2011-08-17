@@ -1,5 +1,5 @@
 # Overview
-This is an idea that came up during a break at a daylong session at Lone Star Ruby Conference and I quick registered the domain name. I thought it would be fun to find people who are willing to pair program in your area. So this is this start of such a project. Hopefully I can find others to help me with it and get it going (and keep me on it). 
+This is an idea that came up during a break at a daylong session at Lone Star Ruby Conference and I quick registered the domain name. I thought it would be fun to find people who are willing to pair program in your area. So this is this start of such a project. Hopefully I can find others to help me with it and get it going (and keep me on it).
 
 ## Plan:
 * Page where Developers can login and make a profile, including the following:
@@ -23,5 +23,5 @@ This is an idea that came up during a break at a daylong session at Lone Star Ru
 5.  Copy the example config file into the config directory ```cp config/examples/app_config.yml config/```
 6.  Register your application (This makes authentication work) [Register Here!](http://github.com/account/applications/new)
   - Main URL for development may vary some but mine is ```http://localhost:3000``` since I just use Webrick
-  - Callback URL is ```http://localhost:3000/auth/github``` adjust your accordingly.
-7.  There is no 7!  You should be ready to hack.  
+  - Callback URL is ```http://localhost:3000/auth/github/callback``` adjust your accordingly.
+7.  There is no 7!  You should be ready to hack.
