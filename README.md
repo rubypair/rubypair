@@ -6,9 +6,8 @@ This is an idea that came up during a break at a daylong session at Lone Star Ru
   - twitter, linked in profiles, github
   - areas of code you like (tests, views, database, etc)
   - city, state (optional)
-  - prefer in-person or online pair programming
+  - prefer in-person, online pair programming, or either
   - link to coderwall
-* Page to search/browse people similar to you
 * Comment on profile (talk positively how it was to pair with that person)
 
 ## Future:
@@ -24,4 +23,6 @@ This is an idea that came up during a break at a daylong session at Lone Star Ru
 6.  Register your application (This makes authentication work) [Register Here!](http://github.com/account/applications/new)
   - Main URL for development may vary some but mine is ```http://localhost:3000``` since I just use Webrick
   - Callback URL is ```http://localhost:3000/auth/github/callback``` adjust your accordingly.
-7.  There is no 7!  You should be ready to hack.
+7.  Update your config/app_config.yml with values supplied rom Github's OAUTH app registration
+8.  Install MongoDB.  We recommend using [homebrew](https://github.com/mxcl/homebrew)
+9.  There is no 9!
