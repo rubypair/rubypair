@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
       user.location = user_hash['location']
       user.save!
       session[:github_login] = user.github_login
-      redirect_target = :edit_profile
+      redirect_target = edit_profile_path(user.profile.id)
     end
 
     redirect_to redirect_target
