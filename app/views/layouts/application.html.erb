@@ -35,7 +35,7 @@
         <% end %>
       </ul>
     </div>
-    <div id="container" class="container_12">
+    <div id="container" class="container_12 clearfix">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
