@@ -15,6 +15,7 @@ class ProfilesController < ApplicationController
 
   private
     def find_profile
+      @user = current_user
       @profile = current_user.profile
     end
 end

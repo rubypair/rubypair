@@ -4,26 +4,43 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset"
-@import "compass/typography/lists/horizontal-list"
-@import "compass/utilities/general/clearfix"
 @import "960/grid"
+@import "compass/typography/lists/horizontal-list"
 
-#header
-  @include grid(12)
 
+body
   h1
     font-size: 2.5em
-
-  ul
-    @include horizontal-list
-
-#container
-  @include grid(12)
-  margin-top: 20px
-
   h2
     font-size: 1.7em
+  h3
+    font-size: 1.4em
+  h4
+    font-size: 1.2em
+  h5
+    font-size: 1.1em
 
-#newest_remote_users
+#header
+  +grid(12)
 
-#newest_local_users
+  ul
+    +horizontal-list
+
+#container
+  +grid(12)
+  margin-top: 20px
+
+.user
+  +clearfix
+  background-color: #dddddd
+  padding: 10px
+
+  img
+    +float-left
+
+  .user-info
+    +float-right
+
+#user-profile
+  label
+    font-weight: bold

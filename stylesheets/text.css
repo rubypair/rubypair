@@ -2,17 +2,17 @@
  * Learn more ~ http://960.gs/
  * *
  * Licensed under GPL and MIT. */
-/* line 4, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 4, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 body {
   font: 13px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
-/* line 6, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 6, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 a:focus {
   outline: 1px dotted invert;
 }
 
-/* line 8, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 8, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 hr {
   border-color: #cccccc;
   border-style: solid;
@@ -21,52 +21,52 @@ hr {
   height: 0;
 }
 
-/* line 14, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 14, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 h1 {
   font-size: 25px;
 }
 
-/* line 16, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 16, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 h2 {
   font-size: 23px;
 }
 
-/* line 18, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 18, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 h3 {
   font-size: 21px;
 }
 
-/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 20, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 h4 {
   font-size: 19px;
 }
 
-/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 22, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 h5 {
   font-size: 17px;
 }
 
-/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 24, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 h6 {
   font-size: 15px;
 }
 
-/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 26, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 ol {
   list-style: decimal;
 }
 
-/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 28, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 ul {
   list-style: square;
 }
 
-/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 30, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 li {
   margin-left: 30px;
 }
 
-/* line 32, ../../../../.rvm/gems/ruby-1.9.2-p180@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
+/* line 32, /Users/evan/.rvm/gems/ruby-1.9.2-p290@rubypair/gems/compass-960-plugin-0.10.4/stylesheets/960/_text.sass */
 p,
 dl,
 hr,

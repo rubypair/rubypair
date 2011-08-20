@@ -1,0 +1,15 @@
+%h2= @user.name
+
+#user-profile
+  = image_tag("http://www.gravatar.com/avatar.php?gravatar_id=#{@user.gravatar_id}", class: :avatar)
+
+  %ul
+    %li.location
+      %label Location
+      = @user.location
+    %li.pairing-preference
+      %label
+        Pairing preference
+        %span.smaller
+          (remote, in-person, both)
+      = @user.profile.remote_local_preference
