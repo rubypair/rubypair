@@ -15,4 +15,7 @@
         Pairing preference
         %span.smaller
           (remote, in-person, both)
-      = @user.profile.remote_local_preference
+      = @profile.remote_local_preference
+    %li.interests
+      %label Interests
+      = @profile.interests
