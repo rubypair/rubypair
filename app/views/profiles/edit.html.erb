@@ -1,8 +1,13 @@
 <%= form_for current_user, :url => profile_path do |f| %>
   <%= f.fields_for :profile do |p| %>
+    <h3>Interested in...</h3>
     <p>
-      <%= p.label :interested_in_remote, "Open to remote pairing?" %>
+      <%= p.label :interested_in_remote, "Remote pairing?" %>
       <%= p.check_box :interested_in_remote %>
+    </p>
+    <p>
+      <%= p.label :interested_in_local, "In-person pairing?" %>
+      <%= p.check_box :interested_in_local %>
     </p>
   <% end %>
   <p>
