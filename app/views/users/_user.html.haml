@@ -1,5 +1,7 @@
 %li.user
   = link_to image_tag("http://www.gravatar.com/avatar.php?gravatar_id=#{user.gravatar_id}"), user_path(user)
   .user-info
-    %h4.user-name
-    = user.name
+    %h4.user-name= user.name
+    %h4.github-login= link_to user.github_login, "http://github.com/#{user.github_login}"
+    - if user.twitter
+      %h4.twitter-handle= link_to user.twitter, "http://twitter.com/#{user.twitter[1..-1]}"

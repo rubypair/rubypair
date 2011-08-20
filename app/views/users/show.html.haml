@@ -10,6 +10,10 @@
     %li.email
       %label E-mail
       = link_to @user.email, "mailto:#{@user.email}"
+    - if @user.twitter.present?
+      %li.twitter
+        %label Twitter
+        = link_to @user.twitter, "http://twitter.com/#{@user.twitter[1..-1]}"
     %li.pairing-preference
       %label
         Pairing preference

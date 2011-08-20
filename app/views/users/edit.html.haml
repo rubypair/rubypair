@@ -1,6 +1,9 @@
 = form_for current_user, :url => user_path do |f|
   %h3 Interested in...
   %p
+    = f.label :twitter, "Twitter handle"
+    = f.text_field :twitter
+  %p
     = f.label :remote_local_preference, "Pairing in person, remotely, or both?"
     = f.select :remote_local_preference, User::REMOTE_LOCAL_PREFERENCES
   %p

@@ -12,6 +12,7 @@ class User
   field :location,                 type: String
   field :remote_local_preference,  type: String, default: "Both"
   field :interests,                type: String
+  field :twitter,                  type: String
 
   REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
 
