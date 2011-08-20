@@ -7,6 +7,9 @@
     %li.location
       %label Location
       = @user.location
+    %li.email
+      %label E-mail
+      = link_to @user.email, "mailto:#{@user.email}"
     %li.pairing-preference
       %label
         Pairing preference
