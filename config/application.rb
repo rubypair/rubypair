@@ -10,8 +10,6 @@ require "rails/test_unit/railtie"
 # or test environments.
 Bundler.require *Rails.groups(:assets) if defined?(Bundler)
 
-APP_CONFIG = YAML.load(File.read(File.expand_path('../app_config.yml', __FILE__)))
-
 module Rubypair
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
