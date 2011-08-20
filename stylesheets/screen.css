@@ -144,19 +144,20 @@ body h5 {
   *zoom: 1;
   background-color: #dddddd;
   padding: 10px;
+  margin: 10px 0px;
 }
-/* line 38, ../sass/screen.sass */
+/* line 39, ../sass/screen.sass */
 .user img {
   display: inline;
   float: left;
 }
-/* line 41, ../sass/screen.sass */
+/* line 42, ../sass/screen.sass */
 .user .user-info {
   display: inline;
   float: right;
 }
 
-/* line 45, ../sass/screen.sass */
+/* line 46, ../sass/screen.sass */
 #user-profile label {
   font-weight: bold;
 }
