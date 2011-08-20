@@ -1,8 +1,9 @@
 class Profile
   include Mongoid::Document
 
-  field :interested_in_remote, type: Integer, default: 0
-  field :interested_in_local, type: Integer, default: 0
+  LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
+
+  field :remote_local_preference, type: String, default: "Both"
 
   embedded_in :user
 end

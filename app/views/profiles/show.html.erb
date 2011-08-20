@@ -1,11 +1,5 @@
 <h3>Interested in...</h3>
 <label>
-  Remote pairing:
-  <%= @profile.interested_in_remote == 1 ? "Yes" : "No" %>
+  <p>Pairing in person, remotely, or both?:</p>
+  <%= @profile.remote_local_preference %>
 </label>
-<label>
-  In-person pairing:
-  <%= @profile.interested_in_local == 1 ? "Yes" : "No" %>
-</label>
-
-
