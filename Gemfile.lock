@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/chriseppstein/compass.git
+  remote: https://github.com/chriseppstein/compass.git
   revision: 8a407a6df78e67c3ace22a559e17e234057fa968
   branch: rails31
   specs:
@@ -76,6 +76,7 @@ GEM
     fssm (0.2.7)
     gherkin (2.4.11)
       json (>= 1.4.6)
+    haml (3.1.2)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.13)
@@ -229,6 +230,7 @@ DEPENDENCIES
   compass!
   compass-960-plugin
   cucumber
+  haml
   jquery-rails
   mongoid
   omniauth
