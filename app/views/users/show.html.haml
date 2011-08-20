@@ -13,7 +13,7 @@
     - if @user.twitter.present?
       %li.twitter
         %label Twitter
-        = link_to "@#{user.twitter}", "http://twitter.com/#{@user.twitter}"
+        = link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
     %li.pairing-preference
       %label
         Pairing preference
