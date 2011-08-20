@@ -1,0 +1,19 @@
+- unless current_user
+  %p
+    Welcome to RubyPair, connecting people for pair programing ruby.
+  %p
+    Please login with your GitHub account, we will pull your location from there. A profile will be created here to store your preferred days/times, and a blurb about what kind of things you like doing.
+
+#search
+  = form_tag "/search", method: :get do
+    = text_field_tag "query", nil, class: "search-field", placeholder: "Search...", size: 35
+
+#newest_remote_users.push_1.grid_3
+  %h2 Newest remote
+  %ul
+    = render @newest_remote_users
+
+#newest_local_users.push_4.grid_3.push_1
+  %h2 Newest in-person
+  %ul
+    = render @newest_local_users

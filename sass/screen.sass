@@ -22,7 +22,6 @@ body
 
 #header
   +grid(12)
-
   ul
     +horizontal-list
 
@@ -35,12 +34,15 @@ body
   background-color: #dddddd
   padding: 10px
   margin: 10px 0px
-
   img
     +float-left
-
   .user-info
     +float-right
+
+#search
+  +clearfix
+  +grid-prefix(9,12)
+  +grid(3,12)
 
 #user-profile
   label

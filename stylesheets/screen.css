@@ -96,7 +96,7 @@ body h5 {
   margin-right: 10px;
   width: 940px;
 }
-/* line 26, ../sass/screen.sass */
+/* line 25, ../sass/screen.sass */
 #header ul {
   margin: 0;
   padding: 0;
@@ -128,7 +128,7 @@ body h5 {
   padding-right: 0;
 }
 
-/* line 29, ../sass/screen.sass */
+/* line 28, ../sass/screen.sass */
 #container {
   display: inline;
   float: left;
@@ -138,7 +138,7 @@ body h5 {
   margin-top: 20px;
 }
 
-/* line 33, ../sass/screen.sass */
+/* line 32, ../sass/screen.sass */
 .user {
   overflow: hidden;
   *zoom: 1;
@@ -146,18 +146,30 @@ body h5 {
   padding: 10px;
   margin: 10px 0px;
 }
-/* line 39, ../sass/screen.sass */
+/* line 37, ../sass/screen.sass */
 .user img {
   display: inline;
   float: left;
 }
-/* line 42, ../sass/screen.sass */
+/* line 39, ../sass/screen.sass */
 .user .user-info {
   display: inline;
   float: right;
 }
 
-/* line 46, ../sass/screen.sass */
+/* line 42, ../sass/screen.sass */
+#search {
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: 720px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+}
+
+/* line 48, ../sass/screen.sass */
 #user-profile label {
   font-weight: bold;
 }
