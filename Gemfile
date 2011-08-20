@@ -23,7 +23,6 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'rspec'
 gem 'rspec-rails'
-gem 'cucumber'
 
 gem 'omniauth'
 
