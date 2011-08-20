@@ -1,19 +1,20 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::FullTextSearch
 
-  field :name,         type: String
-  field :github_login, type: String
-  field :email,        type: String
-  field :github_url,   type: String
-  field :blog_url,     type: String
-  field :gravatar_id,  type: String
-  field :location,     type: String
+  field :name,                     type: String
+  field :github_login,             type: String
+  field :email,                    type: String
+  field :github_url,               type: String
+  field :blog_url,                 type: String
+  field :gravatar_id,              type: String
+  field :location,                 type: String
+  field :remote_local_preference,  type: String, default: "Both"
+  field :interests,                type: String
 
-  embeds_one :profile
+  REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
 
-  after_create do
-    create_profile
-  end
+  fulltext_search_in :name, :github_login, :interests
 end
 

@@ -1,5 +1,5 @@
-class ProfilesController < ApplicationController
-  before_filter :find_profile
+class UsersController < ApplicationController
+  before_filter :find_user
   before_filter :authorize_user!, :except => :show
 
   def show
@@ -15,9 +15,8 @@ class ProfilesController < ApplicationController
   end
 
   private
-    def find_profile
-      @user = User.where("profile._id" => params[:id]).first
-      @profile = @user.try(:profile)
+    def find_user
+      @user = User.where("_id" => params[:id]).first
     end
 
     def authorize_user!

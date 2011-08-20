@@ -1,5 +1,5 @@
 %li.user
-  = link_to image_tag("http://www.gravatar.com/avatar.php?gravatar_id=#{user.gravatar_id}"), profile_path(user.profile)
+  = link_to image_tag("http://www.gravatar.com/avatar.php?gravatar_id=#{user.gravatar_id}"), user_path(user)
   .user-info
     %h4.user-name
     = user.name

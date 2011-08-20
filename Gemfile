@@ -6,6 +6,7 @@ gem 'rails', '3.1.0.rc5'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mongoid'
+gem 'mongoid_fulltext'
 gem 'bson_ext'
 
 # Gems used only for assets and not required
