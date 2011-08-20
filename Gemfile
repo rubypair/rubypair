@@ -21,9 +21,6 @@ end
 
 gem 'haml'
 gem 'jquery-rails'
-gem 'rspec'
-gem 'rspec-rails'
-
 gem 'omniauth'
 
 # Use unicorn as the web server
@@ -34,6 +31,9 @@ gem 'omniauth'
 
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'minitest'
+  gem 'mini_specunit'
+  gem 'mini_backtrace'
 end
 
 group :test do

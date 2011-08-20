@@ -137,8 +137,13 @@ body h5 {
   width: 940px;
   margin-top: 20px;
 }
+/* line 31, ../sass/screen.sass */
+#container p {
+  padding: 5px;
+  line-height: 1.3em;
+}
 
-/* line 32, ../sass/screen.sass */
+/* line 35, ../sass/screen.sass */
 .user {
   overflow: hidden;
   *zoom: 1;
@@ -146,19 +151,31 @@ body h5 {
   padding: 10px;
   margin: 10px 0px;
 }
-/* line 37, ../sass/screen.sass */
+/* line 40, ../sass/screen.sass */
 .user img {
   display: inline;
   float: left;
 }
-/* line 39, ../sass/screen.sass */
+/* line 42, ../sass/screen.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
 
-/* line 43, ../sass/screen.sass */
+/* line 46, ../sass/screen.sass */
+#newest_users {
+  overflow: hidden;
+  *zoom: 1;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  margin-top: 25px;
+}
+
+/* line 51, ../sass/screen.sass */
 #newest_remote_users {
   padding-left: 80px;
   display: inline;
@@ -168,7 +185,7 @@ body h5 {
   width: 300px;
 }
 
-/* line 47, ../sass/screen.sass */
+/* line 55, ../sass/screen.sass */
 #newest_local_users {
   padding-left: 160px;
   display: inline;
@@ -178,7 +195,7 @@ body h5 {
   width: 300px;
 }
 
-/* line 51, ../sass/screen.sass */
+/* line 59, ../sass/screen.sass */
 #search {
   overflow: hidden;
   *zoom: 1;
@@ -188,9 +205,10 @@ body h5 {
   margin-left: 10px;
   margin-right: 10px;
   width: 220px;
+  margin-bottom: 20px;
 }
 
-/* line 57, ../sass/screen.sass */
+/* line 66, ../sass/screen.sass */
 #user-profile label {
   font-weight: bold;
 }

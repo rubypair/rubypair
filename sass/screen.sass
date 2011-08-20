@@ -28,6 +28,9 @@ body
 #container
   +grid(12)
   margin-top: 20px
+  p
+    padding: 5px
+    line-height: 1.3em
 
 .user
   +clearfix
@@ -39,6 +42,11 @@ body
   .user-info
     +float-left
     margin-left: 10px
+
+#newest_users
+  +clearfix
+  +grid(12,12)
+  margin-top: 25px
 
 #newest_remote_users
   +grid-prefix(1,12)
@@ -52,6 +60,7 @@ body
   +clearfix
   +grid-prefix(9,12)
   +grid(3,12)
+  margin-bottom: 20px
 
 #user-profile
   label
