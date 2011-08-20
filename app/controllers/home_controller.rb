@@ -5,6 +5,6 @@ class HomeController < ApplicationController
   end
 
   def search
-    @results = User.fulltext_search(params[:query])
+    @users = User.fulltext_search(params[:query])
   end
 end
