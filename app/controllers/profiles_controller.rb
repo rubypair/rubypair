@@ -8,7 +8,6 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    params[:user][:profile][:interested_in_remote] = params[:user][:profile][:interested_in_remote] == "1"
     current_user.update_attributes(params[:user])
     flash[:notice] = "Your profile has been updated!"
     redirect_to :root
