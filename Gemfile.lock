@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/chriseppstein/compass.git
-  revision: 91a748a916360057b5caf6ea85cd38441d3b257a
+  revision: 8a407a6df78e67c3ace22a559e17e234057fa968
   branch: rails31
   specs:
-    compass (0.12.0.alpha.0.91a748a)
+    compass (0.12.0.alpha.0.8a407a6)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
@@ -49,11 +49,9 @@ GEM
     bson_ext (1.3.1)
     builder (3.0.0)
     chunky_png (1.2.1)
-    coffee-rails (3.1.0.rc.5)
-      actionpack (~> 3.1.0.rc1)
+    coffee-rails (3.1.0.rc.6)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0.rc1)
-      sprockets (>= 2.0.0.beta.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -74,11 +72,11 @@ GEM
     faraday (0.6.1)
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
-      rack (>= 1.1.0, < 2)
+      rack (< 2, >= 1.1.0)
     fssm (0.2.7)
-    gherkin (2.4.6)
+    gherkin (2.4.11)
       json (>= 1.4.6)
-    hike (1.2.0)
+    hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.13)
       railties (~> 3.0)
@@ -93,7 +91,7 @@ GEM
     mime-types (1.16)
     mongo (1.3.1)
       bson (>= 1.3.1)
-    mongoid (2.1.7)
+    mongoid (2.1.8)
       activemodel (~> 3.0)
       mongo (~> 1.3)
       tzinfo (~> 0.3.22)
@@ -218,7 +216,7 @@ GEM
     turn (0.8.2)
       ansi (>= 1.2.2)
     tzinfo (0.3.29)
-    uglifier (1.0.0)
+    uglifier (1.0.1)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
 
