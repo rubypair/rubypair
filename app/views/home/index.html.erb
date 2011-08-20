@@ -7,9 +7,16 @@
   </p>
 <% end %>
 
-<div id="newest_users">
-  <h2>Newest users</h2>
+<div id="newest_remote_users">
+  <h2>Newest remote users</h2>
   <ul>
-    <%= render @newest_users %>
+    <%= render @newest_remote_users %>
+  </ul>
+</div>
+
+<div id="newest_local_users">
+  <h2>Newest in-person users</h2>
+  <ul>
+    <%= render @newest_local_users %>
   </ul>
 </div>
