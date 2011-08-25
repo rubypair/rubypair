@@ -11,10 +11,11 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="logo"></div>
-    <div id="header" class="container_12 clearfix">
-      <h1 class="grid_3"><%= link_to "Ruby Pair", root_path %></h1>
-      <ul class="push_5 grid_4">
+    <div id="header">
+      <div id="logo">
+        <%= image_tag "/assets/logo.png" %>
+      </div>
+      <ul>
         <% if current_user %>
           <li>
               Welcome <%= current_user.github_login %>!
@@ -34,7 +35,7 @@
         <% end %>
       </ul>
     </div>
-    <div id="container" class="container_12 clearfix">
+    <div id="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
