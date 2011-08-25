@@ -18,6 +18,9 @@ class User
 
   fulltext_search_in :name, :github_login, :interests
 
-  validates_format_of :twitter, with: /^\w+$/, message: "if present must not start with a '@'"
+  validates_format_of :twitter,
+    on: :update,
+    with: /^\w+$/,
+    message: "if present must not start with a '@'"
 end
 
