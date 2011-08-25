@@ -93,24 +93,6 @@ body h5 {
 }
 
 /* line 24, ../../../sass/application.sass */
-#logo {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-}
-/* line 26, ../../../sass/application.sass */
-#logo img {
-  padding-left: 240px;
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 460px;
-}
-
-/* line 30, ../../../sass/application.sass */
 #header {
   display: inline;
   float: left;
@@ -120,7 +102,20 @@ body h5 {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 33, ../../../sass/application.sass */
+/* line 27, ../../../sass/application.sass */
+#header #logo {
+  position: relative;
+}
+/* line 29, ../../../sass/application.sass */
+#header #logo img {
+  padding-left: 240px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 460px;
+}
+/* line 32, ../../../sass/application.sass */
 #header ul {
   padding-left: 400px;
   display: inline;
@@ -157,8 +152,21 @@ body h5 {
 #header ul li.last {
   padding-right: 0;
 }
+/* line 36, ../../../sass/application.sass */
+#header a {
+  position: absolute;
+  top: 225px;
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: 382.4px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+}
 
-/* line 38, ../../../sass/application.sass */
+/* line 43, ../../../sass/application.sass */
 #container {
   display: inline;
   float: left;
@@ -169,12 +177,12 @@ body h5 {
   *zoom: 1;
   margin-top: 20px;
 }
-/* line 42, ../../../sass/application.sass */
+/* line 47, ../../../sass/application.sass */
 #container p {
   padding: 5px;
 }
 
-/* line 46, ../../../sass/application.sass */
+/* line 51, ../../../sass/application.sass */
 .user {
   overflow: hidden;
   *zoom: 1;
@@ -182,19 +190,19 @@ body h5 {
   padding: 10px;
   margin: 10px 0px;
 }
-/* line 51, ../../../sass/application.sass */
+/* line 56, ../../../sass/application.sass */
 .user img {
   display: inline;
   float: left;
 }
-/* line 53, ../../../sass/application.sass */
+/* line 58, ../../../sass/application.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
 
-/* line 57, ../../../sass/application.sass */
+/* line 62, ../../../sass/application.sass */
 #newest_users {
   overflow: hidden;
   *zoom: 1;
@@ -206,7 +214,7 @@ body h5 {
   margin-top: 25px;
 }
 
-/* line 62, ../../../sass/application.sass */
+/* line 67, ../../../sass/application.sass */
 #newest_remote_users {
   padding-left: 80px;
   display: inline;
@@ -216,7 +224,7 @@ body h5 {
   width: 300px;
 }
 
-/* line 66, ../../../sass/application.sass */
+/* line 71, ../../../sass/application.sass */
 #newest_local_users {
   padding-left: 160px;
   display: inline;
@@ -226,7 +234,7 @@ body h5 {
   width: 300px;
 }
 
-/* line 70, ../../../sass/application.sass */
+/* line 75, ../../../sass/application.sass */
 #search {
   overflow: hidden;
   *zoom: 1;
@@ -238,7 +246,7 @@ body h5 {
   width: 220px;
 }
 
-/* line 76, ../../../sass/application.sass */
+/* line 81, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
 }

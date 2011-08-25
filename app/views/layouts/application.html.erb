@@ -15,8 +15,8 @@
       <div id="logo">
         <%= image_tag "/assets/logo.png" %>
       </div>
-      <ul>
-        <% if current_user %>
+      <% if current_user %>
+        <ul>
           <li>
               Welcome <%= current_user.github_login %>!
           </li>
@@ -28,12 +28,12 @@
           <li>
             <a href="<%= edit_user_path(current_user) %>">Pairing Profile</a>
           </li>
-        <% else %>
-          <li>
-            <%= link_to "Sign in with Github", "/auth/github" %>
-          </li>
-        <% end %>
-      </ul>
+        </ul>
+      <% else %>
+        <a id="signin" href="/auth/github">
+          <%= image_tag "/assets/signin-button.png" %>
+        </a>
+      <% end %>
     </div>
     <div id="container">
       <% flash.each do |name, msg| %>

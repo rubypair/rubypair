@@ -21,19 +21,24 @@ body
   h5
     font-size: 1.1em
 
-#logo
-  +grid(12)
-  img
-    +grid_prefix(3,12)
-    +grid(6,12)
-
 #header
   +grid(12)
   +clearfix
+  #logo
+    position: relative
+    img
+      +grid_prefix(3,12)
+      +grid(6,12)
   ul
     +grid_prefix(5,12)
     +grid(4,12)
     +horizontal-list
+  a
+    position: absolute
+    top: 225px
+    +clearfix
+    +grid_prefix(4.78,12)
+    +grid(3,12)
 
 #container
   +grid(12)
