@@ -2,9 +2,7 @@
 <html>
   <head>
     <title><%= yield(:title) || "RubyPair.com" %></title>
-    <%= stylesheet_link_tag "/stylesheets/screen" %>
-    <%= stylesheet_link_tag "/stylesheets/print" %>
-    <%= stylesheet_link_tag "/stylesheets/grid" %>
+    <%= stylesheet_link_tag :application %>
     <!--[if IE]>
         <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -13,6 +11,7 @@
     <%= yield(:head) %>
   </head>
   <body>
+    <div id="logo"></div>
     <div id="header" class="container_12 clearfix">
       <h1 class="grid_3"><%= link_to "Ruby Pair", root_path %></h1>
       <ul class="push_5 grid_4">
