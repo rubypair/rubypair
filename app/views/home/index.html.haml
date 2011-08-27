@@ -2,21 +2,12 @@
   = form_tag "/search", method: :get do
     = text_field_tag "query", nil, class: "search-field", placeholder: "Search...", size: 35
 
-- if current_user
-  %p
-    +1 salvia ethical readymade, you probably haven't heard of them irony DIY skateboard four loko. Fap cred wes anderson brooklyn, VHS mcsweeney's locavore retro next level. Skateboard sustainable vinyl terry richardson tumblr tattooed. Quinoa fixie sustainable craft beer williamsburg PBR carles, echo park four loko retro butcher shoreditch letterpress high life. American apparel tattooed tofu next level bicycle rights. Terry richardson hoodie sartorial williamsburg, fanny pack etsy homo Austin tofu carles you probably haven't heard of them salvia. Put a bird on it you probably haven't heard of them fap messenger bag.
-- else
-  %p
-    Welcome to RubyPair, connecting people for pair programing ruby.
-  %p
-    Please login with your GitHub account, we will pull your location from there. A profile will be created here to store your preferred days/times, and a blurb about what kind of things you like doing.
-
 #newest_users
   #newest_remote_users
-    %h2 Newest remote
+    %h2 Remote developers
     %ul
       = render @newest_remote_users
   #newest_local_users
-    %h2 Newest in-person
+    %h2 In-Person developers
     %ul
       = render @newest_local_users
