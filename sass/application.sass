@@ -43,10 +43,27 @@ body
 #container
   +grid(12)
   +clearfix
-  margin-top: 20px
+  margin-top: 40px
   p
     padding: 5px
-    //line-height: 1.3em
+  #search
+    +grid-prefix(4.78,12)
+    +grid(3,12)
+    position: absolute
+    width: 169px
+    input
+      width: 156px
+      padding: 5px
+  #newest_users
+    +clearfix
+    +grid(12,12)
+    position: relative
+    #newest_remote_users
+      +grid-prefix(1,12)
+      +grid(4,12)
+    #newest_local_users
+      +grid-prefix(2,12)
+      +grid(4,12)
 
 .user
   +clearfix
@@ -58,24 +75,6 @@ body
   .user-info
     +float-left
     margin-left: 10px
-
-#newest_users
-  +clearfix
-  +grid(12,12)
-  margin-top: 25px
-
-#newest_remote_users
-  +grid-prefix(1,12)
-  +grid(4,12)
-
-#newest_local_users
-  +grid-prefix(2,12)
-  +grid(4,12)
-
-#search
-  +clearfix
-  +grid-prefix(9,12)
-  +grid(3,12)
 
 #user-profile
   label

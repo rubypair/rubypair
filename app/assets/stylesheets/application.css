@@ -175,35 +175,30 @@ body h5 {
   width: 940px;
   overflow: hidden;
   *zoom: 1;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 /* line 47, ../../../sass/application.sass */
 #container p {
   padding: 5px;
 }
-
-/* line 51, ../../../sass/application.sass */
-.user {
-  overflow: hidden;
-  *zoom: 1;
-  background-color: #dddddd;
-  padding: 10px;
-  margin: 10px 0px;
-}
-/* line 56, ../../../sass/application.sass */
-.user img {
-  display: inline;
-  float: left;
-}
-/* line 58, ../../../sass/application.sass */
-.user .user-info {
+/* line 49, ../../../sass/application.sass */
+#container #search {
+  padding-left: 382.4px;
   display: inline;
   float: left;
   margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  position: absolute;
+  width: 169px;
 }
-
-/* line 62, ../../../sass/application.sass */
-#newest_users {
+/* line 54, ../../../sass/application.sass */
+#container #search input {
+  width: 156px;
+  padding: 5px;
+}
+/* line 57, ../../../sass/application.sass */
+#container #newest_users {
   overflow: hidden;
   *zoom: 1;
   display: inline;
@@ -211,11 +206,10 @@ body h5 {
   margin-left: 10px;
   margin-right: 10px;
   width: 940px;
-  margin-top: 25px;
+  position: relative;
 }
-
-/* line 67, ../../../sass/application.sass */
-#newest_remote_users {
+/* line 61, ../../../sass/application.sass */
+#container #newest_users #newest_remote_users {
   padding-left: 80px;
   display: inline;
   float: left;
@@ -223,9 +217,8 @@ body h5 {
   margin-right: 10px;
   width: 300px;
 }
-
-/* line 71, ../../../sass/application.sass */
-#newest_local_users {
+/* line 64, ../../../sass/application.sass */
+#container #newest_users #newest_local_users {
   padding-left: 160px;
   display: inline;
   float: left;
@@ -234,19 +227,27 @@ body h5 {
   width: 300px;
 }
 
-/* line 75, ../../../sass/application.sass */
-#search {
+/* line 68, ../../../sass/application.sass */
+.user {
   overflow: hidden;
   *zoom: 1;
-  padding-left: 720px;
+  background-color: #dddddd;
+  padding: 10px;
+  margin: 10px 0px;
+}
+/* line 73, ../../../sass/application.sass */
+.user img {
+  display: inline;
+  float: left;
+}
+/* line 75, ../../../sass/application.sass */
+.user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
 }
 
-/* line 81, ../../../sass/application.sass */
+/* line 80, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
 }
