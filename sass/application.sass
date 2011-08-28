@@ -6,6 +6,7 @@
 @import "compass/reset"
 @import "960/grid"
 @import "compass/typography/lists/horizontal-list"
+@import "compass/css3/border-radius"
 
 
 @font-face
@@ -42,35 +43,31 @@ body
   +grid(12)
   +clearfix
   #logo
+    +clearfix
     position: relative
     img
       +grid_prefix(3,12)
       +grid(6,12)
+  a
+    position: absolute
+    top: 225px
+    +grid_prefix(4.78,12)
+    +grid(3,12)
   ul
     +grid_prefix(5,12)
     +grid(4,12)
     +horizontal-list
-  a
-    position: absolute
-    top: 225px
-    +clearfix
-    +grid_prefix(4.78,12)
-    +grid(3,12)
 
 #container
   +grid(12)
   +clearfix
   margin-top: 40px
-  p
-    padding: 5px
   #search
-    +grid-prefix(4.78,12)
-    +grid(3,12)
+    +grid-prefix(4.94,12)
     position: absolute
     width: 169px
     input
       width: 156px
-      padding: 5px
   #newest_users
     +clearfix
     +grid(12,12)
@@ -88,6 +85,11 @@ body
     #newest_local_users
       +grid-prefix(2,12)
       +grid(4,12)
+
+@mixin non-first-user-info
+  font-family: 'Myriad Pro Italic'
+  padding-left: 27px
+  margin-top: 1px
 
 .user
   +clearfix
@@ -109,14 +111,10 @@ body
     .user-name
       text-transform: uppercase
     .github-login
-      font-family: 'Myriad Pro Italic'
-      padding-left: 27px
-      margin-top: 1px
+      +non-first-user-info
       background: url('/assets/github-profile.png') no-repeat
     .twitter-handle
-      font-family: 'Myriad Pro Italic'
-      padding-left: 27px
-      margin-top: 1px
+      +non-first-user-info
       background: url('/assets/twitter-profile.png') no-repeat
 
 #user-profile

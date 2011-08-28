@@ -82,39 +82,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url("/assets/League-Gothic.otf") format("opentype");
 }
 
-/* line 23, ../../../sass/application.sass */
+/* line 24, ../../../sass/application.sass */
 body {
   background-image: url("/assets/background.png");
   font-family: "Myriad Pro";
 }
-/* line 26, ../../../sass/application.sass */
+/* line 27, ../../../sass/application.sass */
 body h1 {
   font-size: 2.5em;
 }
-/* line 28, ../../../sass/application.sass */
+/* line 29, ../../../sass/application.sass */
 body h2 {
   font-size: 1.7em;
 }
-/* line 30, ../../../sass/application.sass */
+/* line 31, ../../../sass/application.sass */
 body h3 {
   font-size: 1.4em;
 }
-/* line 32, ../../../sass/application.sass */
+/* line 33, ../../../sass/application.sass */
 body h4 {
   font-size: 1.2em;
 }
-/* line 34, ../../../sass/application.sass */
+/* line 35, ../../../sass/application.sass */
 body h5 {
   font-size: 1.1em;
 }
 
-/* line 37, ../../../sass/application.sass */
+/* line 38, ../../../sass/application.sass */
 #wrapper {
   width: 980px;
   margin: 0 auto;
 }
 
-/* line 41, ../../../sass/application.sass */
+/* line 42, ../../../sass/application.sass */
 #header {
   display: inline;
   float: left;
@@ -124,11 +124,13 @@ body h5 {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 44, ../../../sass/application.sass */
+/* line 45, ../../../sass/application.sass */
 #header #logo {
+  overflow: hidden;
+  *zoom: 1;
   position: relative;
 }
-/* line 46, ../../../sass/application.sass */
+/* line 48, ../../../sass/application.sass */
 #header #logo img {
   padding-left: 240px;
   display: inline;
@@ -137,7 +139,18 @@ body h5 {
   margin-right: 10px;
   width: 460px;
 }
-/* line 49, ../../../sass/application.sass */
+/* line 51, ../../../sass/application.sass */
+#header a {
+  position: absolute;
+  top: 225px;
+  padding-left: 382.4px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+}
+/* line 56, ../../../sass/application.sass */
 #header ul {
   padding-left: 400px;
   display: inline;
@@ -174,21 +187,8 @@ body h5 {
 #header ul li.last {
   padding-right: 0;
 }
-/* line 53, ../../../sass/application.sass */
-#header a {
-  position: absolute;
-  top: 225px;
-  overflow: hidden;
-  *zoom: 1;
-  padding-left: 382.4px;
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
-}
 
-/* line 60, ../../../sass/application.sass */
+/* line 61, ../../../sass/application.sass */
 #container {
   display: inline;
   float: left;
@@ -199,27 +199,17 @@ body h5 {
   *zoom: 1;
   margin-top: 40px;
 }
-/* line 64, ../../../sass/application.sass */
-#container p {
-  padding: 5px;
-}
-/* line 66, ../../../sass/application.sass */
+/* line 65, ../../../sass/application.sass */
 #container #search {
-  padding-left: 382.4px;
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
+  padding-left: 395.2px;
   position: absolute;
   width: 169px;
 }
-/* line 71, ../../../sass/application.sass */
+/* line 69, ../../../sass/application.sass */
 #container #search input {
   width: 156px;
-  padding: 5px;
 }
-/* line 74, ../../../sass/application.sass */
+/* line 71, ../../../sass/application.sass */
 #container #newest_users {
   overflow: hidden;
   *zoom: 1;
@@ -230,18 +220,18 @@ body h5 {
   width: 940px;
   position: relative;
 }
-/* line 78, ../../../sass/application.sass */
+/* line 75, ../../../sass/application.sass */
 #container #newest_users h2 {
   font-size: 1.4em;
   color: #848484;
 }
-/* line 81, ../../../sass/application.sass */
+/* line 78, ../../../sass/application.sass */
 #container #newest_users h2 .pairing-type {
   font-size: 1.1em;
   font-family: "Myriad Pro Italic";
   color: #1e1f1e;
 }
-/* line 85, ../../../sass/application.sass */
+/* line 82, ../../../sass/application.sass */
 #container #newest_users #newest_remote_users {
   padding-left: 80px;
   display: inline;
@@ -250,7 +240,7 @@ body h5 {
   margin-right: 10px;
   width: 300px;
 }
-/* line 88, ../../../sass/application.sass */
+/* line 85, ../../../sass/application.sass */
 #container #newest_users #newest_local_users {
   padding-left: 160px;
   display: inline;
@@ -260,7 +250,7 @@ body h5 {
   width: 300px;
 }
 
-/* line 92, ../../../sass/application.sass */
+/* line 94, ../../../sass/application.sass */
 .user {
   overflow: hidden;
   *zoom: 1;
@@ -269,32 +259,32 @@ body h5 {
   padding: 10px;
   margin: 10px 0px;
 }
-/* line 98, ../../../sass/application.sass */
+/* line 100, ../../../sass/application.sass */
 .user img {
   display: inline;
   float: left;
   border: 1px solid #a9a7a3;
 }
-/* line 101, ../../../sass/application.sass */
+/* line 103, ../../../sass/application.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
-/* line 104, ../../../sass/application.sass */
+/* line 106, ../../../sass/application.sass */
 .user .user-info a {
   text-decoration: none;
   color: black;
 }
-/* line 107, ../../../sass/application.sass */
+/* line 109, ../../../sass/application.sass */
 .user .user-info h4 {
   line-height: 26px;
 }
-/* line 109, ../../../sass/application.sass */
+/* line 111, ../../../sass/application.sass */
 .user .user-info .user-name {
   text-transform: uppercase;
 }
-/* line 111, ../../../sass/application.sass */
+/* line 113, ../../../sass/application.sass */
 .user .user-info .github-login {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
@@ -309,7 +299,7 @@ body h5 {
   background: url("/assets/twitter-profile.png") no-repeat;
 }
 
-/* line 123, ../../../sass/application.sass */
+/* line 121, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
 }
