@@ -8,8 +8,17 @@
 @import "compass/typography/lists/horizontal-list"
 
 
+@font-face
+  font-family: 'Myriad Pro Italic'
+  src:  url('/assets/MYRIADPRO-CONDIT.OTF') format('opentype')
+
+@font-face
+  font-family: 'Myriad Pro'
+  src:  url('/assets/MYRIADPRO-REGULAR.OTF') format('opentype')
+
 body
   background-image: url("/assets/background.png")
+  font-family: 'Myriad Pro'
   h1
     font-size: 2.5em
   h2
@@ -62,6 +71,13 @@ body
     +clearfix
     +grid(12,12)
     position: relative
+    h2
+      font-size: 1.4em
+      color: #848484
+      .pairing-type
+        font-size: 1.1em
+        font-family: 'Myriad Pro Italic'
+        color: #1E1F1E
     #newest_remote_users
       +grid-prefix(1,12)
       +grid(4,12)

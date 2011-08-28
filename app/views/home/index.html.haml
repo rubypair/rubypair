@@ -4,10 +4,10 @@
 
 #newest_users
   #newest_remote_users
-    %h2 Remote developers
+    %h2 <span class="pairing-type">Remote</span> developers
     %ul
       = render @newest_remote_users
   #newest_local_users
-    %h2 In-Person developers
+    %h2 <span class="pairing-type">In-Person</span> developers
     %ul
       = render @newest_local_users
