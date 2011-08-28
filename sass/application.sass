@@ -10,11 +10,15 @@
 
 @font-face
   font-family: 'Myriad Pro Italic'
-  src:  url('/assets/MYRIADPRO-CONDIT.OTF') format('opentype')
+  src: url('/assets/MYRIADPRO-CONDIT.OTF') format('opentype')
 
 @font-face
   font-family: 'Myriad Pro'
-  src:  url('/assets/MYRIADPRO-REGULAR.OTF') format('opentype')
+  src: url('/assets/MYRIADPRO-REGULAR.OTF') format('opentype')
+
+@font-face
+  font-family: 'League Gothic'
+  src: url('/assets/League-Gothic.otf') format('opentype')
 
 body
   background-image: url("/assets/background.png")
@@ -87,14 +91,33 @@ body
 
 .user
   +clearfix
-  background-color: #dddddd
+  font-family: 'League Gothic'
+  color: black
   padding: 10px
   margin: 10px 0px
   img
     +float-left
+    border: 1px solid #A9A7A3
   .user-info
     +float-left
     margin-left: 10px
+    a
+      text-decoration: none
+      color: black
+    h4
+      line-height: 26px
+    .user-name
+      text-transform: uppercase
+    .github-login
+      font-family: 'Myriad Pro Italic'
+      padding-left: 27px
+      margin-top: 1px
+      background: url('/assets/github-profile.png') no-repeat
+    .twitter-handle
+      font-family: 'Myriad Pro Italic'
+      padding-left: 27px
+      margin-top: 1px
+      background: url('/assets/twitter-profile.png') no-repeat
 
 #user-profile
   label
