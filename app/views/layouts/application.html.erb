@@ -11,36 +11,38 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="header">
-      <div id="logo">
-        <%= image_tag "/assets/logo.png" %>
+    <div id="wrapper">
+      <div id="header">
+        <div id="logo">
+          <%= image_tag "/assets/logo.png" %>
+        </div>
+        <% if current_user %>
+          <ul>
+            <li>
+                Welcome <%= current_user.github_login %>!
+            </li>
+            <li>/</li>
+            <li>
+                <%= link_to "Sign Out", signout_path %>
+            </li>
+            <li>/</li>
+            <li>
+              <a href="<%= edit_user_path(current_user) %>">Pairing Profile</a>
+            </li>
+          </ul>
+        <% else %>
+          <a id="signin" href="/auth/github">
+            <%= image_tag "/assets/signin-button.png" %>
+          </a>
+        <% end %>
       </div>
-      <% if current_user %>
-        <ul>
-          <li>
-              Welcome <%= current_user.github_login %>!
-          </li>
-          <li>/</li>
-          <li>
-              <%= link_to "Sign Out", signout_path %>
-          </li>
-          <li>/</li>
-          <li>
-            <a href="<%= edit_user_path(current_user) %>">Pairing Profile</a>
-          </li>
-        </ul>
-      <% else %>
-        <a id="signin" href="/auth/github">
-          <%= image_tag "/assets/signin-button.png" %>
-        </a>
-      <% end %>
-    </div>
-    <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= content_tag :h1, yield(:title)  %>
-      <%= yield %>
+      <div id="container">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+        <%= content_tag :h1, yield(:title)  %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

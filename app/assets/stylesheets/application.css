@@ -93,6 +93,12 @@ body h5 {
 }
 
 /* line 24, ../../../sass/application.sass */
+#wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+/* line 28, ../../../sass/application.sass */
 #header {
   display: inline;
   float: left;
@@ -102,11 +108,11 @@ body h5 {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 27, ../../../sass/application.sass */
+/* line 31, ../../../sass/application.sass */
 #header #logo {
   position: relative;
 }
-/* line 29, ../../../sass/application.sass */
+/* line 33, ../../../sass/application.sass */
 #header #logo img {
   padding-left: 240px;
   display: inline;
@@ -115,7 +121,7 @@ body h5 {
   margin-right: 10px;
   width: 460px;
 }
-/* line 32, ../../../sass/application.sass */
+/* line 36, ../../../sass/application.sass */
 #header ul {
   padding-left: 400px;
   display: inline;
@@ -152,7 +158,7 @@ body h5 {
 #header ul li.last {
   padding-right: 0;
 }
-/* line 36, ../../../sass/application.sass */
+/* line 40, ../../../sass/application.sass */
 #header a {
   position: absolute;
   top: 225px;
@@ -166,7 +172,7 @@ body h5 {
   width: 220px;
 }
 
-/* line 43, ../../../sass/application.sass */
+/* line 47, ../../../sass/application.sass */
 #container {
   display: inline;
   float: left;
@@ -177,11 +183,11 @@ body h5 {
   *zoom: 1;
   margin-top: 40px;
 }
-/* line 47, ../../../sass/application.sass */
+/* line 51, ../../../sass/application.sass */
 #container p {
   padding: 5px;
 }
-/* line 49, ../../../sass/application.sass */
+/* line 53, ../../../sass/application.sass */
 #container #search {
   padding-left: 382.4px;
   display: inline;
@@ -192,12 +198,12 @@ body h5 {
   position: absolute;
   width: 169px;
 }
-/* line 54, ../../../sass/application.sass */
+/* line 58, ../../../sass/application.sass */
 #container #search input {
   width: 156px;
   padding: 5px;
 }
-/* line 57, ../../../sass/application.sass */
+/* line 61, ../../../sass/application.sass */
 #container #newest_users {
   overflow: hidden;
   *zoom: 1;
@@ -208,7 +214,7 @@ body h5 {
   width: 940px;
   position: relative;
 }
-/* line 61, ../../../sass/application.sass */
+/* line 65, ../../../sass/application.sass */
 #container #newest_users #newest_remote_users {
   padding-left: 80px;
   display: inline;
@@ -217,7 +223,7 @@ body h5 {
   margin-right: 10px;
   width: 300px;
 }
-/* line 64, ../../../sass/application.sass */
+/* line 68, ../../../sass/application.sass */
 #container #newest_users #newest_local_users {
   padding-left: 160px;
   display: inline;
@@ -227,7 +233,7 @@ body h5 {
   width: 300px;
 }
 
-/* line 68, ../../../sass/application.sass */
+/* line 72, ../../../sass/application.sass */
 .user {
   overflow: hidden;
   *zoom: 1;
@@ -235,19 +241,19 @@ body h5 {
   padding: 10px;
   margin: 10px 0px;
 }
-/* line 73, ../../../sass/application.sass */
+/* line 77, ../../../sass/application.sass */
 .user img {
   display: inline;
   float: left;
 }
-/* line 75, ../../../sass/application.sass */
+/* line 79, ../../../sass/application.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
 
-/* line 80, ../../../sass/application.sass */
+/* line 84, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
 }
