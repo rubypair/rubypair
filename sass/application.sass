@@ -24,6 +24,7 @@
 body
   background-image: url("/assets/background.png")
   font-family: 'Myriad Pro'
+  font-size: 16px
   h1
     font-size: 2.5em
   h2
@@ -67,12 +68,16 @@ body
     position: absolute
     width: 169px
     input
+      +border-radius(4px, 4px)
+      font-family: 'Myriad Pro'
+      font-size: 1em
       width: 156px
   #newest_users
     +clearfix
     +grid(12,12)
     position: relative
     h2
+      text-align: center
       font-size: 1.4em
       color: #848484
       .pairing-type
@@ -80,11 +85,11 @@ body
         font-family: 'Myriad Pro Italic'
         color: #1E1F1E
     #newest_remote_users
-      +grid-prefix(1,12)
-      +grid(4,12)
+      +grid-prefix(1.5,12)
+      +grid(3,12)
     #newest_local_users
-      +grid-prefix(2,12)
-      +grid(4,12)
+      +grid-prefix(3,12)
+      +grid(3,12)
 
 @mixin non-first-user-info
   font-family: 'Myriad Pro Italic'
