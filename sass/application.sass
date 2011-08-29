@@ -7,6 +7,7 @@
 @import "960/grid"
 @import "compass/typography/lists/horizontal-list"
 @import "compass/css3/border-radius"
+@import "compass/css3/opacity"
 
 
 @font-face
@@ -65,6 +66,7 @@ body
   margin-top: 40px
   #search
     +grid-prefix(4.94,12)
+    z-index: 1
     position: absolute
     width: 169px
     input
@@ -102,9 +104,20 @@ body
   color: black
   padding: 10px
   margin: 10px 0px
-  img
+  .user-image
     +float-left
-    border: 1px solid #A9A7A3
+    position: relative
+    img.gravatar
+      border: 1px solid #A9A7A3
+    .magnifying-glass
+      +opacity(0.6)
+      position: absolute
+      left: 0px
+      visibility: hidden
+      height: 80px
+      width: 80px
+    &:hover .magnifying-glass
+      visibility: visible
   .user-info
     +float-left
     margin-left: 10px
