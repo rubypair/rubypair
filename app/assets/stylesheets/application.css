@@ -141,7 +141,7 @@ body h5 {
   width: 460px;
 }
 /* line 53, ../../../sass/application.sass */
-#header a {
+#header a#signin {
   position: absolute;
   top: 225px;
   padding-left: 382.4px;
@@ -152,44 +152,16 @@ body h5 {
   width: 220px;
 }
 /* line 58, ../../../sass/application.sass */
-#header ul {
-  padding-left: 400px;
+#header #menu {
+  padding-left: 382.4px;
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 300px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 60, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-#header ul li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0px;
-  white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-/* line 48, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-#header ul li:first-child, #header ul li.first {
-  padding-left: 0;
-}
-/* line 49, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-#header ul li:last-child {
-  padding-right: 0;
-}
-/* line 50, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-#header ul li.last {
-  padding-right: 0;
+  width: 220px;
 }
 
-/* line 63, ../../../sass/application.sass */
+/* line 62, ../../../sass/application.sass */
 #container {
   display: inline;
   float: left;
@@ -200,14 +172,14 @@ body h5 {
   *zoom: 1;
   margin-top: 40px;
 }
-/* line 67, ../../../sass/application.sass */
+/* line 66, ../../../sass/application.sass */
 #container #search {
   padding-left: 395.2px;
   z-index: 1;
   position: absolute;
   width: 169px;
 }
-/* line 72, ../../../sass/application.sass */
+/* line 71, ../../../sass/application.sass */
 #container #search input {
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
@@ -219,7 +191,7 @@ body h5 {
   font-size: 1em;
   width: 156px;
 }
-/* line 77, ../../../sass/application.sass */
+/* line 76, ../../../sass/application.sass */
 #container #newest_users {
   overflow: hidden;
   *zoom: 1;
@@ -230,19 +202,19 @@ body h5 {
   width: 940px;
   position: relative;
 }
-/* line 81, ../../../sass/application.sass */
+/* line 80, ../../../sass/application.sass */
 #container #newest_users h2 {
   text-align: center;
   font-size: 1.4em;
   color: #848484;
 }
-/* line 85, ../../../sass/application.sass */
+/* line 84, ../../../sass/application.sass */
 #container #newest_users h2 .pairing-type {
   font-size: 1.1em;
   font-family: "Myriad Pro Italic";
   color: #1e1f1e;
 }
-/* line 89, ../../../sass/application.sass */
+/* line 88, ../../../sass/application.sass */
 #container #newest_users #newest_remote_users {
   padding-left: 120px;
   display: inline;
@@ -251,7 +223,7 @@ body h5 {
   margin-right: 10px;
   width: 220px;
 }
-/* line 92, ../../../sass/application.sass */
+/* line 91, ../../../sass/application.sass */
 #container #newest_users #newest_local_users {
   padding-left: 240px;
   display: inline;
@@ -261,7 +233,7 @@ body h5 {
   width: 220px;
 }
 
-/* line 101, ../../../sass/application.sass */
+/* line 100, ../../../sass/application.sass */
 .user {
   overflow: hidden;
   *zoom: 1;
@@ -270,17 +242,17 @@ body h5 {
   padding: 10px;
   margin: 10px 0px;
 }
-/* line 107, ../../../sass/application.sass */
+/* line 106, ../../../sass/application.sass */
 .user .user-image {
   display: inline;
   float: left;
   position: relative;
 }
-/* line 110, ../../../sass/application.sass */
+/* line 109, ../../../sass/application.sass */
 .user .user-image img.gravatar {
   border: 1px solid #a9a7a3;
 }
-/* line 112, ../../../sass/application.sass */
+/* line 111, ../../../sass/application.sass */
 .user .user-image .magnifying-glass {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
@@ -290,37 +262,37 @@ body h5 {
   height: 80px;
   width: 80px;
 }
-/* line 119, ../../../sass/application.sass */
+/* line 118, ../../../sass/application.sass */
 .user .user-image:hover .magnifying-glass {
   visibility: visible;
 }
-/* line 121, ../../../sass/application.sass */
+/* line 120, ../../../sass/application.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
-/* line 124, ../../../sass/application.sass */
+/* line 123, ../../../sass/application.sass */
 .user .user-info a {
   text-decoration: none;
   color: black;
 }
-/* line 127, ../../../sass/application.sass */
+/* line 126, ../../../sass/application.sass */
 .user .user-info h4 {
   line-height: 26px;
 }
-/* line 129, ../../../sass/application.sass */
+/* line 128, ../../../sass/application.sass */
 .user .user-info .user-name {
   text-transform: uppercase;
 }
-/* line 131, ../../../sass/application.sass */
+/* line 130, ../../../sass/application.sass */
 .user .user-info .github-login {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
   margin-top: 1px;
   background: url("/assets/github-profile.png") no-repeat;
 }
-/* line 134, ../../../sass/application.sass */
+/* line 133, ../../../sass/application.sass */
 .user .user-info .twitter-handle {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
@@ -328,7 +300,7 @@ body h5 {
   background: url("/assets/twitter-profile.png") no-repeat;
 }
 
-/* line 139, ../../../sass/application.sass */
+/* line 138, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
 }
