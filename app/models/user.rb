@@ -11,8 +11,13 @@ class User
   field :gravatar_id,              type: String
   field :location,                 type: String
   field :remote_local_preference,  type: String, default: "Both"
+  field :pairing_toolchain,        type: String
   field :interests,                type: String
   field :twitter,                  type: String
+  field :gpl,                      type: Boolean
+  field :mit,                      type: Boolean
+  field :cc,                       type: Boolean
+  field :proprietary,              type: Boolean
 
   REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
 
