@@ -254,45 +254,47 @@ body h5 {
 }
 /* line 111, ../../../sass/application.sass */
 .user .user-image .magnifying-glass {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
   position: absolute;
+  top: 0px;
   left: 0px;
   visibility: hidden;
   height: 80px;
   width: 80px;
 }
-/* line 118, ../../../sass/application.sass */
+/* line 119, ../../../sass/application.sass */
 .user .user-image:hover .magnifying-glass {
   visibility: visible;
+  background-color: black;
 }
-/* line 120, ../../../sass/application.sass */
+/* line 122, ../../../sass/application.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
-/* line 123, ../../../sass/application.sass */
+/* line 125, ../../../sass/application.sass */
 .user .user-info a {
   text-decoration: none;
   color: black;
 }
-/* line 126, ../../../sass/application.sass */
+/* line 128, ../../../sass/application.sass */
 .user .user-info h4 {
   line-height: 26px;
 }
-/* line 128, ../../../sass/application.sass */
+/* line 130, ../../../sass/application.sass */
 .user .user-info .user-name {
   text-transform: uppercase;
 }
-/* line 130, ../../../sass/application.sass */
+/* line 132, ../../../sass/application.sass */
 .user .user-info .github-login {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
   margin-top: 1px;
   background: url("/assets/github-profile.png") no-repeat;
 }
-/* line 133, ../../../sass/application.sass */
+/* line 135, ../../../sass/application.sass */
 .user .user-info .twitter-handle {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
@@ -300,7 +302,7 @@ body h5 {
   background: url("/assets/twitter-profile.png") no-repeat;
 }
 
-/* line 138, ../../../sass/application.sass */
+/* line 140, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
 }
