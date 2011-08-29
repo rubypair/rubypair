@@ -62,7 +62,7 @@ body
 #container
   +grid(12)
   +clearfix
-  margin-top: 40px
+  margin-top: 55px
   #search
     +grid-prefix(4.94,12)
     z-index: 1
@@ -78,7 +78,6 @@ body
     +grid(12,12)
     position: relative
     h2
-      text-align: center
       font-size: 1.4em
       color: #848484
       .pairing-type
@@ -101,7 +100,7 @@ body
   +clearfix
   font-family: 'League Gothic'
   color: black
-  padding: 10px
+  padding: 10px 0
   margin: 10px 0px
   .user-image
     +float-left
@@ -116,6 +115,7 @@ body
       visibility: hidden
       height: 80px
       width: 80px
+      background: rgba(0,0,0,0.7) url("/assets/user-hover-profile-icon.png") no-repeat 50% 50%
     &:hover .magnifying-glass
       visibility: visible
       background-color: black

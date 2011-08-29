@@ -170,7 +170,7 @@ body h5 {
   width: 940px;
   overflow: hidden;
   *zoom: 1;
-  margin-top: 40px;
+  margin-top: 55px;
 }
 /* line 66, ../../../sass/application.sass */
 #container #search {
@@ -204,17 +204,16 @@ body h5 {
 }
 /* line 80, ../../../sass/application.sass */
 #container #newest_users h2 {
-  text-align: center;
   font-size: 1.4em;
   color: #848484;
 }
-/* line 84, ../../../sass/application.sass */
+/* line 83, ../../../sass/application.sass */
 #container #newest_users h2 .pairing-type {
   font-size: 1.1em;
   font-family: "Myriad Pro Italic";
   color: #1e1f1e;
 }
-/* line 88, ../../../sass/application.sass */
+/* line 87, ../../../sass/application.sass */
 #container #newest_users #newest_remote_users {
   padding-left: 120px;
   display: inline;
@@ -223,7 +222,7 @@ body h5 {
   margin-right: 10px;
   width: 220px;
 }
-/* line 91, ../../../sass/application.sass */
+/* line 90, ../../../sass/application.sass */
 #container #newest_users #newest_local_users {
   padding-left: 240px;
   display: inline;
@@ -233,26 +232,26 @@ body h5 {
   width: 220px;
 }
 
-/* line 100, ../../../sass/application.sass */
+/* line 99, ../../../sass/application.sass */
 .user {
   overflow: hidden;
   *zoom: 1;
   font-family: "League Gothic";
   color: black;
-  padding: 10px;
+  padding: 10px 0;
   margin: 10px 0px;
 }
-/* line 106, ../../../sass/application.sass */
+/* line 105, ../../../sass/application.sass */
 .user .user-image {
   display: inline;
   float: left;
   position: relative;
 }
-/* line 109, ../../../sass/application.sass */
+/* line 108, ../../../sass/application.sass */
 .user .user-image img.gravatar {
   border: 1px solid #a9a7a3;
 }
-/* line 111, ../../../sass/application.sass */
+/* line 110, ../../../sass/application.sass */
 .user .user-image .magnifying-glass {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
@@ -262,6 +261,7 @@ body h5 {
   visibility: hidden;
   height: 80px;
   width: 80px;
+  background: rgba(0, 0, 0, 0.7) url("/assets/user-hover-profile-icon.png") no-repeat 50% 50%;
 }
 /* line 119, ../../../sass/application.sass */
 .user .user-image:hover .magnifying-glass {
