@@ -22,4 +22,5 @@
       = @user.remote_local_preference
     %li.interests
       %label Interests
-      = @user.interests
+      - @user.interests.split(",").each do |term|
+        = link_terms_to_search term
