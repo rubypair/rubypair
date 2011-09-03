@@ -1138,20 +1138,21 @@ body h5 {
   margin-left: 10px;
   margin-right: 10px;
   width: 460px;
+  line-height: 1.4em;
 }
-/* line 232, ../../../sass/application.sass */
+/* line 233, ../../../sass/application.sass */
 #about div {
   margin-top: 30px;
 }
-/* line 235, ../../../sass/application.sass */
+/* line 236, ../../../sass/application.sass */
 #about #contributors li {
   line-height: 25px;
 }
-/* line 237, ../../../sass/application.sass */
+/* line 238, ../../../sass/application.sass */
 #about p {
   margin-top: 15px;
 }
-/* line 239, ../../../sass/application.sass */
+/* line 240, ../../../sass/application.sass */
 #about p:first-letter {
   font-size: 1.3em;
 }
