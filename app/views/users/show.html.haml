@@ -7,9 +7,7 @@
     %li.pairing-preference
       %label
         Pairing preference
-        %span.smaller
-          (remote, in-person, both)
-      %span.value= @user.remote_local_preference
+      %span.value= monkey_slap_preferences @user.remote_local_preference
     - if @user.location.present?
       %li.location
         %label Location
