@@ -841,16 +841,16 @@ body h5 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 220px;
+  width: 300px;
 }
 /* line 108, ../../../sass/application.sass */
 #container #newest_users #newest_local_users {
-  padding-left: 240px;
+  padding-left: 160px;
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 220px;
+  width: 300px;
 }
 /* line 111, ../../../sass/application.sass */
 #container .edit-user {
