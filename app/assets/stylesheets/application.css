@@ -1027,20 +1027,20 @@ body h5 {
 #user-profile .lengthy {
   width: 250px;
 }
-/* line 200, ../../../sass/application.sass */
-#user-profile .interests {
-  text-align: right;
-}
-/* line 202, ../../../sass/application.sass */
+/* line 201, ../../../sass/application.sass */
 #user-profile .interests a:hover {
   background-color: #f3b0a2;
 }
-/* line 204, ../../../sass/application.sass */
+/* line 203, ../../../sass/application.sass */
+#user-profile .interests .value {
+  text-align: right;
+}
+/* line 205, ../../../sass/application.sass */
 #user-profile .smaller {
   font-size: 0.8em;
 }
 
-/* line 207, ../../../sass/application.sass */
+/* line 208, ../../../sass/application.sass */
 #search-page {
   padding-left: 160px;
   display: inline;
