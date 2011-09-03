@@ -1140,18 +1140,18 @@ body h5 {
   width: 460px;
 }
 /* line 232, ../../../sass/application.sass */
-#about #contributors {
+#about div {
   margin-top: 30px;
 }
-/* line 234, ../../../sass/application.sass */
+/* line 235, ../../../sass/application.sass */
 #about #contributors li {
   line-height: 25px;
 }
-/* line 236, ../../../sass/application.sass */
+/* line 237, ../../../sass/application.sass */
 #about p {
   margin-top: 15px;
 }
-/* line 238, ../../../sass/application.sass */
+/* line 239, ../../../sass/application.sass */
 #about p:first-letter {
   font-size: 1.3em;
 }
