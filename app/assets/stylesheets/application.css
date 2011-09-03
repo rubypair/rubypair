@@ -988,6 +988,56 @@ body h5 {
 }
 
 /* line 180, ../../../sass/application.sass */
+#user-profile {
+  padding-left: 160px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 620px;
+}
+/* line 183, ../../../sass/application.sass */
+#user-profile .avatar {
+  float: left;
+  margin-right: 15px;
+}
+/* line 186, ../../../sass/application.sass */
+#user-profile h2 {
+  float: left;
+}
+/* line 188, ../../../sass/application.sass */
+#user-profile ul {
+  float: left;
+  width: 500px;
+}
+/* line 191, ../../../sass/application.sass */
+#user-profile ul li {
+  float: none;
+}
+/* line 193, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
+  float: none;
+}
+/* line 196, ../../../sass/application.sass */
+#user-profile .value {
+  float: right;
+}
+/* line 198, ../../../sass/application.sass */
+#user-profile .lengthy {
+  width: 200px;
+}
+/* line 201, ../../../sass/application.sass */
+#user-profile .interests a:hover {
+  background-color: #f3b0a2;
+}
+
+/* line 204, ../../../sass/application.sass */
+#search-page {
+  padding-left: 160px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 620px;
 }

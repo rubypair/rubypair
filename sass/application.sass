@@ -59,8 +59,6 @@ body
     img
       +grid_prefix(3,12)
       +grid(6,12)
-      width: 418px
-      height: 235px
   a#signin
     position: absolute
     top: 225px
@@ -178,6 +176,32 @@ body
       +non-first-user-info
       background: url('/assets/twitter-profile.png') no-repeat
 
+
 #user-profile
+  +grid-prefix(2,12)
+  +grid(8,12)
+  .avatar
+    float: left
+    margin-right: 15px
+  h2
+    float: left
+  ul
+    float: left
+    width: 500px
+    li
+      float: none
   label
     font-weight: bold
+    float: none
+  .value
+    float: right
+  .lengthy
+    width: 200px
+  .interests
+    a:hover
+      background-color: #F3B0A2
+
+#search-page
+  +grid-prefix(2,12)
+  +grid(8,12)
+
