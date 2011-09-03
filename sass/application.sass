@@ -5,10 +5,19 @@
 
 @import "compass/reset"
 @import "960/grid"
+@import "compass/typography/links/link-colors"
 @import "compass/typography/lists/horizontal-list"
 @import "compass/css3/border-radius"
 @import "compass/css3/opacity"
 
+$link-color: #E33052
+
+@import "preboot.scss"
+@import "form.scss"
+
+a
+  +link-colors($link-color)
+  text-decoration: none
 
 @font-face
   font-family: 'Myriad Pro Italic'
@@ -56,7 +65,9 @@ body
     +grid_prefix(4.78,12)
     +grid(3,12)
   #menu
-    +grid_prefix(4.78,12)
+    position: absolute
+    top: 240px
+    +grid_prefix(4.93,12)
     +grid(3,12)
 
 #container
@@ -64,22 +75,21 @@ body
   +clearfix
   margin-top: 55px
   #search
-    +grid-prefix(4.94,12)
+    +grid-prefix(4.89,12)
     z-index: 1
     position: absolute
     .search-icon
       position: absolute
-      top: 2px
+      top: 0px
       background: rgba(0,0,0,0) url('/assets/search-icon.png') no-repeat 3px 50%
-      width: 16px
-      height: 15px
+      width: 25px
+      height: 25px
       z-index: 2
     input
       +border-radius(4px, 4px)
       position: relative
       font-family: 'Myriad Pro'
-      font-size: 12px
-      width: 143px
+      width: 150px
       padding-left: 16px
   #newest_users
     +clearfix
@@ -98,6 +108,28 @@ body
     #newest_local_users
       +grid-prefix(3,12)
       +grid(3,12)
+  .edit-user
+    +grid-prefix(3,12)
+    +grid(6,12)
+    p
+      +clearfix
+      label
+        float: left
+      input
+        float: right
+      select
+        float: right
+      .tagify-container
+        float: right
+    #interests
+      margin-top: 30px
+    #licenses
+      margin-top: 30px
+    input[type='submit']
+      margin-top: 30px
+    .tagify-container input
+      float: none
+
 
 @mixin non-first-user-info
   font-family: 'Myriad Pro Italic'

@@ -3,15 +3,15 @@
   <head>
     <title><%= yield(:title) || "RubyPair.com" %></title>
     <%= stylesheet_link_tag :application %>
-	<%= stylesheet_link_tag :"tagify-style" %>
-	
+    <%= stylesheet_link_tag :"tagify-style" %>
+
     <!--[if IE]>
         <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
 
     <%= javascript_include_tag :application %>
 
-	
+
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
@@ -25,9 +25,9 @@
         </div>
         <% if current_user %>
           <div id="menu">
-            <span><%= link_to "Sign Out", signout_path %></span>
+            <span><a href="<%= edit_user_path(current_user) %>">My profile</a></span>
             <span>/</span>
-            <span><a href="<%= edit_user_path(current_user) %>">Pairing Profile</a></span>
+            <span><%= link_to "Sign out", signout_path %></span>
           </div>
         <% else %>
           <a id="signin" href="/auth/github">
@@ -37,13 +37,10 @@
       </div>
 
       <div id="container">
-        <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>
-        <% end %>
         <%= content_tag :h1, yield(:title)  %>
         <%= yield %>
       </div>
     </div>
-	
+
   </body>
 </html>

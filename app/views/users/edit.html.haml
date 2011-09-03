@@ -1,32 +1,36 @@
-= form_for current_user, :url => user_path do |f|
-  %p
-    = f.label :twitter, "Twitter handle"
-    = f.text_field :twitter
-  #intersts
-    %h3 Pairing preferences
-    %p
-      = f.label :remote_local_preference, "Pairing in person, remotely, or both?"
-      = f.select :remote_local_preference, User::REMOTE_LOCAL_PREFERENCES
-    %h4 Will pair on software that is...
-    %p
-      = f.label :gpl, "GPL"
-      = f.check_box :gpl
-    %p
-      = f.label :mit, "MIT"
-      = f.check_box :mit
-    %p
-      = f.label :cc, "Creative Commons"
-      = f.check_box :cc
-    %p
-      = f.label :proprietary, "Proprietary"
-      = f.check_box :proprietary
-    %p.interests
-      = f.label :interests, "Describe your pairing interests (click enter after each tag)"
-      = f.text_area :interests
-    %p
-      = f.submit
-  :javascript
-    $('#user_interests').tagify({addTagPrompt: 'add tags'});
-    $('form').submit( function() {
-      $('#user_interests').tagify('serialize');
-      });
+.edit-user
+  = form_for current_user, :url => user_path do |f|
+    #settings
+      %h3 User settings
+      %p
+        = f.label :twitter, "Twitter handle"
+        = f.text_field :twitter
+    #interests
+      %h3 Pairing preferences
+      %p
+        = f.label :remote_local_preference, "Pairing in person, remotely, or both?"
+        = f.select :remote_local_preference, User::REMOTE_LOCAL_PREFERENCES
+      %p.interests
+        = f.label :interests, "Describe your pairing interests (click enter after each tag)"
+        = f.text_area :interests
+      #licenses
+        %h4 Will pair on software that is...
+        %p
+          = f.label :gpl, "GPL"
+          = f.check_box :gpl
+        %p
+          = f.label :mit, "MIT"
+          = f.check_box :mit
+        %p
+          = f.label :cc, "Creative Commons"
+          = f.check_box :cc
+        %p
+          = f.label :proprietary, "Proprietary"
+          = f.check_box :proprietary
+      %p
+        = f.submit
+    :javascript
+      $('#user_interests').tagify({addTagPrompt: 'add tags'});
+      $('form').submit( function() {
+        $('#user_interests').tagify('serialize');
+        });
