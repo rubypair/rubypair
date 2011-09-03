@@ -130,6 +130,23 @@ body
     .tagify-container input
       float: none
 
+#footer
+  +grid(12)
+  +clearfix
+  margin-top: 50px
+  font-size: 0.8em
+  a
+    +link-colors(#848484)
+  ul
+    +horizontal-list
+    +grid-prefix(4.72,12)
+    +grid(2.5,12)
+    display: block
+    float: none
+    li
+      padding-right: 30px
+      &:last-child
+        padding-right: 0
 
 @mixin non-first-user-info
   font-family: 'Myriad Pro Italic'
@@ -208,4 +225,12 @@ body
 #search-page
   +grid-prefix(2,12)
   +grid(8,12)
+
+#about
+  +grid-prefix(3,12)
+  +grid(6,12)
+  p
+    margin-top: 15px
+    &:first-letter
+      font-size: 1.3em
 

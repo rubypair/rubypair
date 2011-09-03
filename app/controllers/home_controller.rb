@@ -7,4 +7,7 @@ class HomeController < ApplicationController
   def search
     @users = User.fulltext_search(params[:query])
   end
+
+  def about
+  end
 end

@@ -907,7 +907,87 @@ body h5 {
   float: none;
 }
 
-/* line 139, ../../../sass/application.sass */
+/* line 133, ../../../sass/application.sass */
+#footer {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  zoom: 1;
+  margin-top: 50px;
+  font-size: 0.8em;
+}
+/* line 123, ../../../sass/preboot.scss */
+#footer:before, #footer:after {
+  display: table;
+  content: "";
+}
+/* line 127, ../../../sass/preboot.scss */
+#footer:after {
+  clear: both;
+}
+/* line 138, ../../../sass/application.sass */
+#footer a {
+  color: #848484;
+}
+/* line 140, ../../../sass/application.sass */
+#footer ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  zoom: 1;
+  padding-left: 377.6px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 180px;
+  display: block;
+  float: none;
+}
+/* line 123, ../../../sass/preboot.scss */
+#footer ul:before, #footer ul:after {
+  display: table;
+  content: "";
+}
+/* line 127, ../../../sass/preboot.scss */
+#footer ul:after {
+  clear: both;
+}
+/* line 60, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#footer ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#footer ul li:first-child, #footer ul li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#footer ul li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#footer ul li.last {
+  padding-right: 0;
+}
+/* line 146, ../../../sass/application.sass */
+#footer ul li {
+  padding-right: 30px;
+}
+/* line 148, ../../../sass/application.sass */
+#footer ul li:last-child {
+  padding-right: 0;
+}
+
+/* line 156, ../../../sass/application.sass */
 .user {
   zoom: 1;
   font-family: "League Gothic";
@@ -924,17 +1004,17 @@ body h5 {
 .user:after {
   clear: both;
 }
-/* line 145, ../../../sass/application.sass */
+/* line 162, ../../../sass/application.sass */
 .user .user-image {
   display: inline;
   float: left;
   position: relative;
 }
-/* line 148, ../../../sass/application.sass */
+/* line 165, ../../../sass/application.sass */
 .user .user-image img.gravatar {
   border: 1px solid #a9a7a3;
 }
-/* line 150, ../../../sass/application.sass */
+/* line 167, ../../../sass/application.sass */
 .user .user-image .magnifying-glass {
   filter: alpha(opacity=0.3);
   -khtml-opacity: 0.003;
@@ -948,38 +1028,38 @@ body h5 {
   width: 80px;
   background: rgba(0, 0, 0, 0.7) url("/assets/user-hover-profile-icon.png") no-repeat 50% 50%;
 }
-/* line 159, ../../../sass/application.sass */
+/* line 176, ../../../sass/application.sass */
 .user .user-image:hover .magnifying-glass {
   visibility: visible;
   background-color: black;
 }
-/* line 162, ../../../sass/application.sass */
+/* line 179, ../../../sass/application.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
-/* line 165, ../../../sass/application.sass */
+/* line 182, ../../../sass/application.sass */
 .user .user-info a {
   text-decoration: none;
   color: black;
 }
-/* line 168, ../../../sass/application.sass */
+/* line 185, ../../../sass/application.sass */
 .user .user-info h4 {
   line-height: 26px;
 }
-/* line 170, ../../../sass/application.sass */
+/* line 187, ../../../sass/application.sass */
 .user .user-info .user-name {
   text-transform: uppercase;
 }
-/* line 172, ../../../sass/application.sass */
+/* line 189, ../../../sass/application.sass */
 .user .user-info .github-login {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
   margin-top: 1px;
   background: url("/assets/github-profile.png") no-repeat;
 }
-/* line 175, ../../../sass/application.sass */
+/* line 192, ../../../sass/application.sass */
 .user .user-info .twitter-handle {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
@@ -987,7 +1067,7 @@ body h5 {
   background: url("/assets/twitter-profile.png") no-repeat;
 }
 
-/* line 180, ../../../sass/application.sass */
+/* line 197, ../../../sass/application.sass */
 #user-profile {
   padding-left: 160px;
   display: inline;
@@ -996,51 +1076,51 @@ body h5 {
   margin-right: 10px;
   width: 620px;
 }
-/* line 183, ../../../sass/application.sass */
+/* line 200, ../../../sass/application.sass */
 #user-profile .avatar {
   float: left;
   margin-right: 15px;
 }
-/* line 186, ../../../sass/application.sass */
+/* line 203, ../../../sass/application.sass */
 #user-profile h2 {
   float: left;
 }
-/* line 188, ../../../sass/application.sass */
+/* line 205, ../../../sass/application.sass */
 #user-profile ul {
   float: left;
   width: 500px;
 }
-/* line 191, ../../../sass/application.sass */
+/* line 208, ../../../sass/application.sass */
 #user-profile ul li {
   float: none;
 }
-/* line 193, ../../../sass/application.sass */
+/* line 210, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
   float: none;
 }
-/* line 196, ../../../sass/application.sass */
+/* line 213, ../../../sass/application.sass */
 #user-profile .value {
   float: right;
 }
-/* line 198, ../../../sass/application.sass */
+/* line 215, ../../../sass/application.sass */
 #user-profile .lengthy {
   width: 250px;
 }
-/* line 201, ../../../sass/application.sass */
+/* line 218, ../../../sass/application.sass */
 #user-profile .interests a:hover {
   background-color: #f3b0a2;
 }
-/* line 203, ../../../sass/application.sass */
+/* line 220, ../../../sass/application.sass */
 #user-profile .interests .value {
   text-align: right;
 }
-/* line 205, ../../../sass/application.sass */
+/* line 222, ../../../sass/application.sass */
 #user-profile .smaller {
   font-size: 0.8em;
 }
 
-/* line 208, ../../../sass/application.sass */
+/* line 225, ../../../sass/application.sass */
 #search-page {
   padding-left: 160px;
   display: inline;
@@ -1048,4 +1128,22 @@ body h5 {
   margin-left: 10px;
   margin-right: 10px;
   width: 620px;
+}
+
+/* line 229, ../../../sass/application.sass */
+#about {
+  padding-left: 240px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 460px;
+}
+/* line 232, ../../../sass/application.sass */
+#about p {
+  margin-top: 15px;
+}
+/* line 234, ../../../sass/application.sass */
+#about p:first-letter {
+  font-size: 1.3em;
 }
