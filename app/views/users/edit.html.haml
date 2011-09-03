@@ -13,20 +13,6 @@
       %p.interests
         = f.label :interests, "Describe your pairing interests (click enter after each tag)"
         = f.text_area :interests
-      #licenses
-        %h4 Will pair on software that is...
-        %p
-          = f.label :gpl, "GPL"
-          = f.check_box :gpl
-        %p
-          = f.label :mit, "MIT"
-          = f.check_box :mit
-        %p
-          = f.label :cc, "Creative Commons"
-          = f.check_box :cc
-        %p
-          = f.label :proprietary, "Proprietary"
-          = f.check_box :proprietary
       %p
         = f.submit
     :javascript
