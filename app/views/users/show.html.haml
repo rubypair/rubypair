@@ -10,16 +10,21 @@
         %span.smaller
           (remote, in-person, both)
       %span.value= @user.remote_local_preference
-    %li.location
-      %label Location
-      %span.value= @user.location
-    %li.email
-      %label E-mail
-      %span.value= link_to @user.email, "mailto:#{@user.email}"
+    - if @user.location.present?
+      %li.location
+        %label Location
+        %span.value= @user.location
+    - if @user.email.present?
+      %li.email
+        %label E-mail
+        %span.value= link_to @user.email, "mailto:#{@user.email}"
     - if @user.twitter.present?
       %li.twitter
         %label Twitter
         %span.value= link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
     %li.interests
       %label Interests
-      %span.value.lengthy= @user.interests.split(",").map { |term| link_terms_to_search(term) }.join(", ").html_safe
+      - if @user.interests
+        %span.value.lengthy= @user.interests.split(",").map { |term| link_terms_to_search(term) }.join(", ").html_safe
+      - else
+        %span.value No interests. So sad...
