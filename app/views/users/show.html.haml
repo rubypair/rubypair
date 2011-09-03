@@ -24,7 +24,7 @@
         %span.value= link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
     %li.interests
       %label Interests
-      - if @user.interests
+      - if @user.interests.present?
         %span.value.lengthy= @user.interests.split(",").map { |term| link_terms_to_search(term) }.join(", ").html_safe
       - else
         %span.value No interests. So sad...
