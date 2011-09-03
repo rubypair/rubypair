@@ -177,9 +177,17 @@ body h5 {
   padding-left: 395.2px;
   z-index: 1;
   position: absolute;
-  width: 169px;
 }
-/* line 71, ../../../sass/application.sass */
+/* line 70, ../../../sass/application.sass */
+#container #search .search-icon {
+  position: absolute;
+  top: 2px;
+  background: rgba(0, 0, 0, 0) url("/assets/search-icon.png") no-repeat 3px 50%;
+  width: 16px;
+  height: 15px;
+  z-index: 2;
+}
+/* line 77, ../../../sass/application.sass */
 #container #search input {
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
@@ -187,11 +195,13 @@ body h5 {
   -ms-border-radius: 4px / 4px;
   -khtml-border-radius: 4px / 4px;
   border-radius: 4px / 4px;
+  position: relative;
   font-family: "Myriad Pro";
-  font-size: 1em;
-  width: 156px;
+  font-size: 12px;
+  width: 143px;
+  padding-left: 16px;
 }
-/* line 76, ../../../sass/application.sass */
+/* line 84, ../../../sass/application.sass */
 #container #newest_users {
   overflow: hidden;
   *zoom: 1;
@@ -202,18 +212,18 @@ body h5 {
   width: 940px;
   position: relative;
 }
-/* line 80, ../../../sass/application.sass */
+/* line 88, ../../../sass/application.sass */
 #container #newest_users h2 {
   font-size: 1.4em;
   color: #848484;
 }
-/* line 83, ../../../sass/application.sass */
+/* line 91, ../../../sass/application.sass */
 #container #newest_users h2 .pairing-type {
   font-size: 1.1em;
   font-family: "Myriad Pro Italic";
   color: #1e1f1e;
 }
-/* line 87, ../../../sass/application.sass */
+/* line 95, ../../../sass/application.sass */
 #container #newest_users #newest_remote_users {
   padding-left: 120px;
   display: inline;
@@ -222,7 +232,7 @@ body h5 {
   margin-right: 10px;
   width: 220px;
 }
-/* line 90, ../../../sass/application.sass */
+/* line 98, ../../../sass/application.sass */
 #container #newest_users #newest_local_users {
   padding-left: 240px;
   display: inline;
@@ -232,7 +242,7 @@ body h5 {
   width: 220px;
 }
 
-/* line 99, ../../../sass/application.sass */
+/* line 107, ../../../sass/application.sass */
 .user {
   overflow: hidden;
   *zoom: 1;
@@ -241,17 +251,17 @@ body h5 {
   padding: 10px 0;
   margin: 10px 0px;
 }
-/* line 105, ../../../sass/application.sass */
+/* line 113, ../../../sass/application.sass */
 .user .user-image {
   display: inline;
   float: left;
   position: relative;
 }
-/* line 108, ../../../sass/application.sass */
+/* line 116, ../../../sass/application.sass */
 .user .user-image img.gravatar {
   border: 1px solid #a9a7a3;
 }
-/* line 110, ../../../sass/application.sass */
+/* line 118, ../../../sass/application.sass */
 .user .user-image .magnifying-glass {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
@@ -263,38 +273,38 @@ body h5 {
   width: 80px;
   background: rgba(0, 0, 0, 0.7) url("/assets/user-hover-profile-icon.png") no-repeat 50% 50%;
 }
-/* line 119, ../../../sass/application.sass */
+/* line 127, ../../../sass/application.sass */
 .user .user-image:hover .magnifying-glass {
   visibility: visible;
   background-color: black;
 }
-/* line 122, ../../../sass/application.sass */
+/* line 130, ../../../sass/application.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
-/* line 125, ../../../sass/application.sass */
+/* line 133, ../../../sass/application.sass */
 .user .user-info a {
   text-decoration: none;
   color: black;
 }
-/* line 128, ../../../sass/application.sass */
+/* line 136, ../../../sass/application.sass */
 .user .user-info h4 {
   line-height: 26px;
 }
-/* line 130, ../../../sass/application.sass */
+/* line 138, ../../../sass/application.sass */
 .user .user-info .user-name {
   text-transform: uppercase;
 }
-/* line 132, ../../../sass/application.sass */
+/* line 140, ../../../sass/application.sass */
 .user .user-info .github-login {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
   margin-top: 1px;
   background: url("/assets/github-profile.png") no-repeat;
 }
-/* line 135, ../../../sass/application.sass */
+/* line 143, ../../../sass/application.sass */
 .user .user-info .twitter-handle {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
@@ -302,7 +312,7 @@ body h5 {
   background: url("/assets/twitter-profile.png") no-repeat;
 }
 
-/* line 140, ../../../sass/application.sass */
+/* line 148, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
 }

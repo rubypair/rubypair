@@ -67,12 +67,20 @@ body
     +grid-prefix(4.94,12)
     z-index: 1
     position: absolute
-    width: 169px
+    .search-icon
+      position: absolute
+      top: 2px
+      background: rgba(0,0,0,0) url('/assets/search-icon.png') no-repeat 3px 50%
+      width: 16px
+      height: 15px
+      z-index: 2
     input
       +border-radius(4px, 4px)
+      position: relative
       font-family: 'Myriad Pro'
-      font-size: 1em
-      width: 156px
+      font-size: 12px
+      width: 143px
+      padding-left: 16px
   #newest_users
     +clearfix
     +grid(12,12)
