@@ -17,7 +17,7 @@ class User
 
   REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
 
-  fulltext_search_in :name, :github_login, :interests
+  fulltext_search_in :name, :github_login, :interests, :location
 
   validates_format_of :twitter,
     on: :update,
