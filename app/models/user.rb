@@ -19,10 +19,14 @@ class User
 
   fulltext_search_in :name, :github_login, :interests, :location
 
-  validates_format_of :twitter,
-    on: :update,
-    with: /^\w+$/,
-    message: "if present must not start with a '@'"
+  # This Normalizes twitter handles - strips and matches them
+  def twitter=(handle)
+    if handle.strip =~ /^@(\w+)$/
+      super($1)
+    else
+      super handle.strip
+    end
+  end
 
   def self.tag_cloud(size = 20)
     interest_histogram
