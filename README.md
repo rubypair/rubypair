@@ -13,16 +13,20 @@ This is an idea that came up during a break at a daylong session at Lone Star Ru
 ## Future:
 * Maybe a reward system (stars? rubyies?) that people can award someone who was helpful. Maybe sponsors can offer prizes.
 
-# Get up and running
+# Setting up development environment
 
-1.  Fork the repo [It's just this easy](http://help.github.com/fork-a-repo/)
-2.  Clone your shiny new repo ```git clone git@github.com:username/rubypair.git```
-3.  Get you some bundler ```gem install bundler```
-4.  Get you some gems ```bundle install```
-5.  Copy the example config file into the config directory ```cp config/examples/app_config.yml config/```
-6.  Register your application (This makes authentication work) [Register Here!](http://github.com/account/applications/new)
-  - Main URL for development may vary some but mine is ```http://localhost:3000``` since I just use Webrick
+1. Get a Github account and press <a rel="facebox" class="minibutton btn-fork" href="#fork_box"><span><span class="icon"></span>Fork</span></a>
+2. Clone your repo `git clone git@github.com:username/rubypair.git`
+3. Prepare
+  <pre>
+    cd rubypair
+    gem install bundler
+    bundle install
+    cp config/app_config.yml.example config/app_config.yml
+  </pre>
+
+4.  [Register your app with Github](http://github.com/account/applications/new) to make authentication work
+  - Main URL for development may vary, mine is ```http://localhost:3000``` since I just use Webrick
   - Callback URL is ```http://localhost:3000/auth/github/callback``` adjust your accordingly.
-7.  Update your config/app_config.yml with values supplied rom Github's OAUTH app registration
-8.  Install MongoDB.  We recommend using [homebrew](https://github.com/mxcl/homebrew)
-9.  There is no 9!
+  - Update your `config/app_config.yml` with values supplied from Github's OAUTH app registration
+5.  Install MongoDB.  We recommend using [homebrew](https://github.com/mxcl/homebrew)
