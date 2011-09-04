@@ -30,10 +30,14 @@ gem 'omniauth'
 # gem 'capistrano'
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'minitest'
   gem 'mini_specunit'
   gem 'mini_backtrace'
+  gem 'guard-minitest'
+  gem 'rb-fsevent'
+  gem 'growl_notify'
 end
 
 group :test do
