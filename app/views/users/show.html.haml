@@ -15,7 +15,7 @@
     - if @user.email.present?
       %li.email
         %label E-mail
-        %span.value= link_to @user.email, "mailto:#{@user.email}"
+        %span.value= mail_to @user.email, @user.email, encode: "javascript"
     - if @user.twitter.present?
       %li.twitter
         %label Twitter
