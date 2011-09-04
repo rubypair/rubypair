@@ -174,7 +174,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
-    rake (0.9.2)
+    rake (0.8.7)
     rb-fsevent (0.4.3.1)
     rb-inotify (0.8.6)
       ffi (>= 0.5.0)
@@ -238,6 +238,7 @@ DEPENDENCIES
   mongoid_fulltext
   omniauth
   rails (= 3.1.0)
+  rake (= 0.8.7)
   rb-fsevent
   rb-inotify
   ruby-debug19
