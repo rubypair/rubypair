@@ -7,4 +7,5 @@ test:
   database: rubypair_test
 
 production:
+  database: rubypair
   uri: <%= ENV['MONGOLAB_URI'] %>

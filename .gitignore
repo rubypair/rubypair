@@ -5,3 +5,4 @@ tmp/
 .sass-cache/
 config/app_config.yml
 .rspec
+public/assets

@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc5'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -38,7 +38,9 @@ group :development, :test do
   gem 'mini_shoulda'
   gem 'guard-minitest'
   gem 'rb-fsevent'
-  gem 'growl_notify'
+  gem 'libnotify'
+  gem 'rb-inotify'
+  #gem 'growl_notify'
 end
 
 group :test do
