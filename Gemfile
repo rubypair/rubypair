@@ -35,6 +35,7 @@ group :development, :test do
   gem 'minitest'
   gem 'mini_specunit'
   gem 'mini_backtrace'
+  gem 'mini_shoulda'
   gem 'guard-minitest'
   gem 'rb-fsevent'
   gem 'growl_notify'

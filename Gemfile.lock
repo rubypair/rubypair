@@ -90,6 +90,8 @@ GEM
     mini_backtrace (0.1.1)
       minitest (> 1.2.0)
       rails (> 2.3.2)
+    mini_shoulda (0.4.0)
+      minitest (> 2.1.0)
     mini_specunit (0.1.1)
       minitest
     minitest (2.5.0)
@@ -227,6 +229,7 @@ DEPENDENCIES
   haml
   jquery-rails
   mini_backtrace
+  mini_shoulda
   mini_specunit
   minitest
   mongoid
