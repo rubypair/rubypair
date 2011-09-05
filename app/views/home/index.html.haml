@@ -1,7 +1,6 @@
-#search
-  %span.search-icon
-  = form_tag "/search", method: :get do
-    = text_field_tag "query", nil, class: "search-field", placeholder: "search by name or interests", size: 35
+- content_for :title, "Updates"
+
+= render 'layouts/searchbox'
 
 #newest_users
   #newest_remote_users

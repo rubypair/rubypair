@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -765,7 +765,7 @@ body h5 {
   margin-right: 10px;
   width: 940px;
   zoom: 1;
-  margin-top: 55px;
+  margin-top: 25px;
 }
 /* line 123, ../../../sass/preboot.scss */
 #container:before, #container:after {
@@ -777,34 +777,6 @@ body h5 {
   clear: both;
 }
 /* line 77, ../../../sass/application.sass */
-#container #search {
-  padding-left: 391.2px;
-  z-index: 1;
-  position: absolute;
-}
-/* line 81, ../../../sass/application.sass */
-#container #search .search-icon {
-  position: absolute;
-  top: 0px;
-  background: rgba(0, 0, 0, 0) url("/assets/search-icon.png") no-repeat 3px 50%;
-  width: 25px;
-  height: 25px;
-  z-index: 2;
-}
-/* line 88, ../../../sass/application.sass */
-#container #search input {
-  -webkit-border-radius: 4px 4px;
-  -moz-border-radius: 4px / 4px;
-  -o-border-radius: 4px / 4px;
-  -ms-border-radius: 4px / 4px;
-  -khtml-border-radius: 4px / 4px;
-  border-radius: 4px / 4px;
-  position: relative;
-  font-family: "Myriad Pro";
-  width: 150px;
-  padding-left: 16px;
-}
-/* line 94, ../../../sass/application.sass */
 #container #newest_users {
   zoom: 1;
   display: inline;
@@ -813,6 +785,7 @@ body h5 {
   margin-right: 10px;
   width: 940px;
   position: relative;
+  margin-top: 50px;
 }
 /* line 123, ../../../sass/preboot.scss */
 #container #newest_users:before, #container #newest_users:after {
@@ -823,18 +796,18 @@ body h5 {
 #container #newest_users:after {
   clear: both;
 }
-/* line 98, ../../../sass/application.sass */
+/* line 82, ../../../sass/application.sass */
 #container #newest_users h2 {
   font-size: 1.4em;
   color: #848484;
 }
-/* line 101, ../../../sass/application.sass */
+/* line 85, ../../../sass/application.sass */
 #container #newest_users h2 .pairing-type {
   font-size: 1.1em;
   font-family: "Myriad Pro Italic";
   color: #1e1f1e;
 }
-/* line 105, ../../../sass/application.sass */
+/* line 89, ../../../sass/application.sass */
 #container #newest_users #newest_remote_users {
   padding-left: 140px;
   display: inline;
@@ -843,7 +816,7 @@ body h5 {
   margin-right: 10px;
   width: 300px;
 }
-/* line 108, ../../../sass/application.sass */
+/* line 92, ../../../sass/application.sass */
 #container #newest_users #newest_local_users {
   padding-left: 160px;
   display: inline;
@@ -852,7 +825,7 @@ body h5 {
   margin-right: 10px;
   width: 300px;
 }
-/* line 111, ../../../sass/application.sass */
+/* line 95, ../../../sass/application.sass */
 #container .edit-user {
   padding-left: 240px;
   display: inline;
@@ -861,7 +834,7 @@ body h5 {
   margin-right: 10px;
   width: 460px;
 }
-/* line 114, ../../../sass/application.sass */
+/* line 98, ../../../sass/application.sass */
 #container .edit-user p {
   zoom: 1;
 }
@@ -874,40 +847,40 @@ body h5 {
 #container .edit-user p:after {
   clear: both;
 }
-/* line 116, ../../../sass/application.sass */
+/* line 100, ../../../sass/application.sass */
 #container .edit-user p label {
   float: left;
 }
-/* line 118, ../../../sass/application.sass */
+/* line 102, ../../../sass/application.sass */
 #container .edit-user p input {
   float: right;
 }
-/* line 120, ../../../sass/application.sass */
+/* line 104, ../../../sass/application.sass */
 #container .edit-user p select {
   float: right;
 }
-/* line 122, ../../../sass/application.sass */
+/* line 106, ../../../sass/application.sass */
 #container .edit-user p .tagify-container {
   float: right;
 }
-/* line 124, ../../../sass/application.sass */
+/* line 108, ../../../sass/application.sass */
 #container .edit-user #interests {
   margin-top: 30px;
 }
-/* line 126, ../../../sass/application.sass */
+/* line 110, ../../../sass/application.sass */
 #container .edit-user #licenses {
   margin-top: 30px;
 }
-/* line 128, ../../../sass/application.sass */
+/* line 112, ../../../sass/application.sass */
 #container .edit-user input[type='submit'] {
   margin-top: 30px;
 }
-/* line 130, ../../../sass/application.sass */
+/* line 114, ../../../sass/application.sass */
 #container .edit-user .tagify-container input {
   float: none;
 }
 
-/* line 133, ../../../sass/application.sass */
+/* line 117, ../../../sass/application.sass */
 #footer {
   display: inline;
   float: left;
@@ -915,7 +888,7 @@ body h5 {
   margin-right: 10px;
   width: 940px;
   zoom: 1;
-  margin-top: 50px;
+  margin: 50px 0;
   font-size: 0.8em;
 }
 /* line 123, ../../../sass/preboot.scss */
@@ -927,11 +900,11 @@ body h5 {
 #footer:after {
   clear: both;
 }
-/* line 138, ../../../sass/application.sass */
+/* line 122, ../../../sass/application.sass */
 #footer a {
   color: #848484;
 }
-/* line 140, ../../../sass/application.sass */
+/* line 124, ../../../sass/application.sass */
 #footer ul {
   margin: 0;
   padding: 0;
@@ -955,7 +928,7 @@ body h5 {
 #footer ul:after {
   clear: both;
 }
-/* line 60, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 60, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #footer ul li {
   list-style-image: none;
   list-style-type: none;
@@ -966,28 +939,58 @@ body h5 {
   padding-left: 4px;
   padding-right: 4px;
 }
-/* line 48, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 48, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #footer ul li:first-child, #footer ul li.first {
   padding-left: 0;
 }
-/* line 49, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 49, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #footer ul li:last-child {
   padding-right: 0;
 }
-/* line 50, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-8a407a6df78e/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+/* line 50, ../../../../../../.rvm/gems/ruby-1.9.2-p290@rubypair/bundler/gems/compass-22e2458b7751/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 #footer ul li.last {
   padding-right: 0;
 }
-/* line 146, ../../../sass/application.sass */
+/* line 130, ../../../sass/application.sass */
 #footer ul li {
   padding-right: 30px;
 }
-/* line 148, ../../../sass/application.sass */
+/* line 132, ../../../sass/application.sass */
 #footer ul li:last-child {
   padding-right: 0;
 }
 
-/* line 156, ../../../sass/application.sass */
+/* line 140, ../../../sass/application.sass */
+#search {
+  margin: 0;
+  padding-left: 391.2px;
+  z-index: 1;
+  position: absolute;
+}
+/* line 145, ../../../sass/application.sass */
+#search .search-icon {
+  position: absolute;
+  top: 0px;
+  background: rgba(0, 0, 0, 0) url("/assets/search-icon.png") no-repeat 3px 50%;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+}
+/* line 152, ../../../sass/application.sass */
+#search input {
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  -o-border-radius: 4px / 4px;
+  -ms-border-radius: 4px / 4px;
+  -khtml-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  position: relative;
+  font-family: "Myriad Pro";
+  width: 150px;
+  padding-left: 20px;
+}
+
+/* line 159, ../../../sass/application.sass */
 .user {
   zoom: 1;
   font-family: "League Gothic";
@@ -1004,17 +1007,17 @@ body h5 {
 .user:after {
   clear: both;
 }
-/* line 162, ../../../sass/application.sass */
+/* line 165, ../../../sass/application.sass */
 .user .user-image {
   display: inline;
   float: left;
   position: relative;
 }
-/* line 165, ../../../sass/application.sass */
+/* line 168, ../../../sass/application.sass */
 .user .user-image img.gravatar {
   border: 1px solid #a9a7a3;
 }
-/* line 167, ../../../sass/application.sass */
+/* line 170, ../../../sass/application.sass */
 .user .user-image .magnifying-glass {
   filter: alpha(opacity=0.3);
   -khtml-opacity: 0.003;
@@ -1028,38 +1031,38 @@ body h5 {
   width: 80px;
   background: rgba(0, 0, 0, 0.7) url("/assets/user-hover-profile-icon.png") no-repeat 50% 50%;
 }
-/* line 176, ../../../sass/application.sass */
+/* line 179, ../../../sass/application.sass */
 .user .user-image:hover .magnifying-glass {
   visibility: visible;
   background-color: black;
 }
-/* line 179, ../../../sass/application.sass */
+/* line 182, ../../../sass/application.sass */
 .user .user-info {
   display: inline;
   float: left;
   margin-left: 10px;
 }
-/* line 182, ../../../sass/application.sass */
+/* line 185, ../../../sass/application.sass */
 .user .user-info a {
   text-decoration: none;
   color: black;
 }
-/* line 185, ../../../sass/application.sass */
+/* line 188, ../../../sass/application.sass */
 .user .user-info h4 {
   line-height: 26px;
 }
-/* line 187, ../../../sass/application.sass */
+/* line 190, ../../../sass/application.sass */
 .user .user-info .user-name {
   text-transform: uppercase;
 }
-/* line 189, ../../../sass/application.sass */
+/* line 192, ../../../sass/application.sass */
 .user .user-info .github-login {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
   margin-top: 1px;
   background: url("/assets/github-profile.png") no-repeat;
 }
-/* line 192, ../../../sass/application.sass */
+/* line 195, ../../../sass/application.sass */
 .user .user-info .twitter-handle {
   font-family: "Myriad Pro Italic";
   padding-left: 27px;
@@ -1067,7 +1070,7 @@ body h5 {
   background: url("/assets/twitter-profile.png") no-repeat;
 }
 
-/* line 197, ../../../sass/application.sass */
+/* line 200, ../../../sass/application.sass */
 #user-profile {
   padding-left: 160px;
   display: inline;
@@ -1076,51 +1079,51 @@ body h5 {
   margin-right: 10px;
   width: 620px;
 }
-/* line 200, ../../../sass/application.sass */
+/* line 203, ../../../sass/application.sass */
 #user-profile .avatar {
   float: left;
   margin-right: 15px;
 }
-/* line 203, ../../../sass/application.sass */
+/* line 206, ../../../sass/application.sass */
 #user-profile h2 {
   float: left;
 }
-/* line 205, ../../../sass/application.sass */
+/* line 208, ../../../sass/application.sass */
 #user-profile ul {
   float: left;
   width: 500px;
 }
-/* line 208, ../../../sass/application.sass */
+/* line 211, ../../../sass/application.sass */
 #user-profile ul li {
   float: none;
 }
-/* line 210, ../../../sass/application.sass */
+/* line 213, ../../../sass/application.sass */
 #user-profile label {
   font-weight: bold;
   float: none;
 }
-/* line 213, ../../../sass/application.sass */
+/* line 216, ../../../sass/application.sass */
 #user-profile .value {
   float: right;
 }
-/* line 215, ../../../sass/application.sass */
+/* line 218, ../../../sass/application.sass */
 #user-profile .lengthy {
   width: 250px;
 }
-/* line 218, ../../../sass/application.sass */
+/* line 221, ../../../sass/application.sass */
 #user-profile .interests a:hover {
   background-color: #f3b0a2;
 }
-/* line 220, ../../../sass/application.sass */
+/* line 223, ../../../sass/application.sass */
 #user-profile .interests .value {
   text-align: right;
 }
-/* line 222, ../../../sass/application.sass */
+/* line 225, ../../../sass/application.sass */
 #user-profile .smaller {
   font-size: 0.8em;
 }
 
-/* line 225, ../../../sass/application.sass */
+/* line 228, ../../../sass/application.sass */
 #search-page {
   padding-left: 160px;
   display: inline;
@@ -1128,9 +1131,10 @@ body h5 {
   margin-left: 10px;
   margin-right: 10px;
   width: 620px;
+  margin-top: 55px;
 }
 
-/* line 229, ../../../sass/application.sass */
+/* line 233, ../../../sass/application.sass */
 #about {
   padding-left: 240px;
   display: inline;
@@ -1140,19 +1144,19 @@ body h5 {
   width: 460px;
   line-height: 1.4em;
 }
-/* line 233, ../../../sass/application.sass */
+/* line 237, ../../../sass/application.sass */
 #about div {
   margin-top: 30px;
 }
-/* line 236, ../../../sass/application.sass */
+/* line 240, ../../../sass/application.sass */
 #about #credits li {
   line-height: 25px;
 }
-/* line 238, ../../../sass/application.sass */
+/* line 242, ../../../sass/application.sass */
 #about p {
   margin-top: 15px;
 }
-/* line 240, ../../../sass/application.sass */
+/* line 244, ../../../sass/application.sass */
 #about p:first-letter {
   font-size: 1.3em;
 }

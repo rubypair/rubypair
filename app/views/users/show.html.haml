@@ -1,5 +1,7 @@
+- content_for :title, "#{@user.github_login}'s profile"
+
 #user-profile
-  = image_tag("http://www.gravatar.com/avatar.php?gravatar_id=#{@user.gravatar_id}", class: :avatar)
+  = gravatar_image @user, :avatar
 
   %h2= @user.name
 
@@ -19,7 +21,7 @@
     - if @user.twitter.present?
       %li.twitter
         %label Twitter
-        %span.value= link_to "@#{@user.twitter}", "http://twitter.com/#{@user.twitter}"
+        %span.value= twitter_url(@user)
     %li.interests
       %label Interests
       - if @user.interests.present?
