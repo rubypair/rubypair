@@ -1,6 +1,15 @@
-#search-page
-  %h2 Search results
+- content_for :title, "Search: #{params[:query]}"
 
-  %ul
-    - @users.each do |user|
-      = render user
+= render 'layouts/searchbox'
+
+#search-page
+
+  - if @users.empty?
+    %h2 Sorry, nothing found
+    
+  - else
+    %h2 Search results
+    
+    %ul
+      - @users.each do |user|
+        = render user

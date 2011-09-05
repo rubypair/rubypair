@@ -11,4 +11,16 @@ module ProfilesHelper
       pref
     end
   end
+  
+  def gravatar_image(user, klass = :gravatar, size = 80)
+    image_tag "http://www.gravatar.com/avatar.php?gravatar_id=#{user.gravatar_id}&size=#{size}", :class => klass
+  end
+  
+  def twitter_url(user)
+    link_to user.twitter, "http://twitter.com/#{user.twitter}"
+  end
+  
+  def github_url(user)
+    link_to user.github_login, "http://github.com/#{user.github_login}"
+  end
 end

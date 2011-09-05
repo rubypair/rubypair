@@ -1,10 +1,10 @@
 %li.user
   .user-image
     %a{href: user_path(user)}
-      = image_tag("http://www.gravatar.com/avatar.php?gravatar_id=#{user.gravatar_id}", :class => :gravatar)
+      = gravatar_image(user)
       %span.magnifying-glass
   .user-info
     %h4.user-name= user.name
-    %h4.github-login= link_to user.github_login, "http://github.com/#{user.github_login}"
+    %h4.github-login= github_url(user)
     - if user.twitter
-      %h4.twitter-handle= link_to user.twitter, "http://twitter.com/#{user.twitter}"
+      %h4.twitter-handle= twitter_url(user)
