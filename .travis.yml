@@ -2,3 +2,4 @@
 rvm: 1.9.2
 notifications:
   disabled: true
+script: "bundle exec rspec spec"
