@@ -1,10 +1,14 @@
-#comment-box
-  = gravatar_image(current_user, :avatar, 60)
+- unless current_user
+  %h3{:style => "margin-top: 30px"}= link_to "Log in with GitHub to post comments", '/auth/github'
+  
+- else
+  #comment-box
+    = gravatar_image(current_user, :avatar, 60)
 
-  - if current_user.nil?
-    %h3= link_to('Log in via Github', '/auth/github')
-  - else
-    = form_for [user, comment] do |f|
-      = f.text_area :body
-      %br
-      .button.right= f.submit
+    - if current_user.nil?
+      %h3= link_to('Log in via Github', '/auth/github')
+    - else
+      = form_for [user, comment] do |f|
+        = f.text_area :body
+        %br
+        .button.right= f.submit

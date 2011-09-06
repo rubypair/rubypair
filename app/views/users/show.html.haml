@@ -30,8 +30,12 @@
         %span.value No interests. So sad...
         
 #user-comments
-  %h4= "What they say about #{@user.name.split.first}:"
-  - @user.comments.each do |comment|
-    = render 'comments/comment', :comment => comment
+  - if @user.comments.empty?
+    %h4= "No comments about #{@user.name.split.first} yet"
+  - else
+    %h4= "What they say about #{@user.name.split.first}:"
+    - @user.comments.each do |comment|
+      = render 'comments/comment', :comment => comment, edit_mode: current_user == @user
     
-  = render 'comments/form', :user => @user, :comment => Comment.new
+  - unless current_user == @user
+    = render 'comments/form', :user => @user, :comment => Comment.new

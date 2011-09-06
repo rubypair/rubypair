@@ -9,6 +9,12 @@ class CommentsController < ApplicationController
   def edit
   end
 
-  def delete
+  def destroy
+    @user = User.find(params[:user_id])
+    @user.comments.find(params[:id]).delete
+    
+    flash[:notice] = "Deleted comment."
+    
+    redirect_to @user
   end
 end
