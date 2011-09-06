@@ -225,6 +225,29 @@ body
   .smaller
     font-size: 0.8em
 
+#user-comments
+  +grid-prefix(2,12)
+  +grid(8,12.6)
+  margin-top: 60px
+  
+  #comment-box
+    padding-top: 10px
+    textarea
+      width: 100%
+      height: 80px
+      
+.comment-box
+  width: 100%
+  margin: 10px 0
+  .body
+    padding: 10px
+    +border-radius(5px, 5px)
+  .author
+    text-align: right
+    padding: 5px
+    .date
+      margin-right: 5px
+
 #search-page
   +grid-prefix(2,12)
   +grid(8,12)

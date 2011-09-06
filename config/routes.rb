@@ -1,4 +1,8 @@
 Rubypair::Application.routes.draw do
+  get "comments/create"
+
+  get "comments/edit"
+
   match '/auth/:provider/callback' => 'sessions#create'
   match '/signout' => 'sessions#destroy'
   match '/about' => 'home#about'
@@ -7,5 +11,7 @@ Rubypair::Application.routes.draw do
 
   root :to => "home#index"
 
-  resources :users, :only => [:edit, :update, :show]
+  resources :users, :only => [:edit, :update, :show] do
+    resources :comments, :only => [:create, :edit, :delete]
+  end
 end

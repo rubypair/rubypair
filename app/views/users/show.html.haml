@@ -28,3 +28,10 @@
         %span.value.lengthy= @user.interests.split(",").map { |term| link_terms_to_search(term) }.join(", ").html_safe
       - else
         %span.value No interests. So sad...
+        
+#user-comments
+  %h4= "What they say about #{@user.name.split.first}:"
+  - @user.comments.each do |comment|
+    = render 'comments/comment', :comment => comment
+    
+  = render 'comments/form', :user => @user, :comment => Comment.new

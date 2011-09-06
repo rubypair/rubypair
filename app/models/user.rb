@@ -17,6 +17,8 @@ class User
 
   REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
 
+  embeds_many :comments
+
   fulltext_search_in :name, :github_login, :interests, :location
 
   # This Normalizes twitter handles - strips and matches them
