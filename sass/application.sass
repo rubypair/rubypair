@@ -231,6 +231,11 @@ body
   margin-top: 60px
   
   #comment-box
+    .avatar
+      +grid-prefix(0)
+      +grid(1, 12)
+      margin-left: -70px
+    
     padding-top: 10px
     textarea
       width: 100%
@@ -247,6 +252,10 @@ body
     padding: 5px
     .date
       margin-right: 5px
+  .avatar
+    +grid-prefix(0)
+    +grid(1, 12)
+    margin-left: -70px
 
 #search-page
   +grid-prefix(2,12)

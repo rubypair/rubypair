@@ -1,4 +1,5 @@
 .comment-box
+  = gravatar_image(comment._author, :avatar, 60)
   .body= comment.body
   .author
     %span.date= time_ago_in_words(comment.created_at) + " ago"

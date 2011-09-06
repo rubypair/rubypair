@@ -1,4 +1,6 @@
 #comment-box
+  = gravatar_image(current_user, :avatar, 60)
+
   - if current_user.nil?
     %h3= link_to('Log in via Github', '/auth/github')
   - else
