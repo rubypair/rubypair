@@ -77,12 +77,14 @@ body
 #container
   +grid(12)
   +clearfix
+  position: relative
   margin-top: 55px
   #search
     position: absolute
     +grid-prefix(4,12)
     +grid(4,12)
     +grid-suffix(4,12)
+    left: 0
     text-align: center
     input
       +border-radius(4px, 4px)
@@ -93,7 +95,6 @@ body
   #newest_users
     +clearfix
     +grid(12,12)
-    position: relative
     margin-top: 2px
     h2
       font-size: 1.4em
