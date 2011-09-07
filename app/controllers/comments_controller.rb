@@ -1,9 +1,13 @@
 class CommentsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
-    @comment = @user.comments.create(params[:comment].merge(:author => current_user.id))
     
-    redirect_to @user
+    if current_user
+      @comment = @user.comments.create(params[:comment].merge(:author => current_user.id))
+      redirect_to @user, :notice => 'Comment posted.'
+    else
+      redirect_to @user, :alert => 'You are not able to post comments!'
+    end
   end
 
   def edit
@@ -11,10 +15,12 @@ class CommentsController < ApplicationController
 
   def destroy
     @user = User.find(params[:user_id])
-    @user.comments.find(params[:id]).delete
     
-    flash[:notice] = "Deleted comment."
-    
-    redirect_to @user
+    if current_user == @user
+      @user.comments.find(params[:id]).delete
+      redirect_to @user, :notice => 'Comment deleted.'
+    else
+      redirect_to @user, :alert => 'You are not able to delete comments!'
+    end
   end
 end

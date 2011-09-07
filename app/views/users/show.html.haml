@@ -28,14 +28,19 @@
         %span.value.lengthy= @user.interests.split(",").map { |term| link_terms_to_search(term) }.join(", ").html_safe
       - else
         %span.value No interests. So sad...
-        
+
+- if flash.key? :notice
+  %h3.notice= flash[:notice]
+- if flash.key? :alert
+  %h3.alert=  flash[:alert]
+       
 #user-comments
   - if @user.comments.empty?
     %h4= "No comments about #{@user.name.split.first} yet"
   - else
     %h4= "What they say about #{@user.name.split.first}:"
-    - @user.comments.each do |comment|
+    - @user.comments.reverse.each do |comment|
       = render 'comments/comment', :comment => comment, edit_mode: current_user == @user
     
   - unless current_user == @user
-    = render 'comments/form', :user => @user, :comment => Comment.new
+    = render 'comments/form', :comment => @user.comments.build

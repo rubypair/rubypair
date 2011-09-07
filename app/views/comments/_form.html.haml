@@ -8,7 +8,7 @@
     - if current_user.nil?
       %h3= link_to('Log in via Github', '/auth/github')
     - else
-      = form_for [user, comment] do |f|
+      = form_for [comment.user, comment] do |f|
         = f.text_area :body
         %br
         .button.right= f.submit
