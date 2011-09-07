@@ -1,4 +1,3 @@
 #search
-  %span.search-icon
   = form_tag "/search", method: :get do
     = text_field_tag "query", nil, class: "search-field", placeholder: "search by name or interests", size: 35, value: (params[:query] if params[:query])
