@@ -47,8 +47,7 @@ body
     font-size: 1.1em
 
 #wrapper
-  width: 980px
-  margin: 0 auto
+  +grid-container
 
 #header
   +grid(12)
@@ -57,38 +56,38 @@ body
     +clearfix
     position: relative
     img
-      +grid_prefix(3,12)
+      +grid-prefix(3,12)
       +grid(6,12)
+      +grid-suffix(3,12)
   a#signin
     position: absolute
     top: 225px
-    +grid_prefix(4.78,12)
+    text-align: center
+    +grid-prefix(4.5,12)
     +grid(3,12)
+    +grid-suffix(4.5,12)
   #menu
     position: absolute
     top: 240px
-    +grid_prefix(4.93,12)
+    text-align: center
+    +grid-prefix(4.5,12)
     +grid(3,12)
+    +grid-suffix(4.5,12)
 
 #container
   +grid(12)
   +clearfix
   margin-top: 55px
   #search
-    +grid-prefix(4.89,12)
-    z-index: 1
     position: absolute
-    .search-icon
-      position: absolute
-      top: 0px
-      background: rgba(0,0,0,0) url('/assets/search-icon.png') no-repeat 3px 50%
-      width: 25px
-      height: 25px
-      z-index: 2
+    +grid-prefix(4,12)
+    +grid(4,12)
+    +grid-suffix(4,12)
+    text-align: center
     input
       +border-radius(4px, 4px)
-      position: relative
       font-family: 'Myriad Pro'
+      background: rgba(255,255,255,1) url('/assets/search-icon.png') no-repeat 2px 40%
       width: 150px
       padding-left: 16px
   #newest_users
@@ -103,14 +102,17 @@ body
         font-family: 'Myriad Pro Italic'
         color: #1E1F1E
     #newest_remote_users
-      +grid-prefix(1.75,12)
+      +grid-prefix(2,12)
       +grid(4,12)
+      +alpha
     #newest_local_users
       +grid-prefix(2,12)
       +grid(4,12)
+      +omega
   .edit-user
     +grid-prefix(3,12)
     +grid(6,12)
+    +alpha
     p
       +clearfix
       label
@@ -134,13 +136,15 @@ body
   +grid(12)
   +clearfix
   margin-top: 50px
+  margin-bottom: 20px
   font-size: 0.8em
   a
     +link-colors(#848484)
   ul
     +horizontal-list
-    +grid-prefix(4.72,12)
     +grid(2.5,12)
+    +grid-prefix(4.75,12)
+    +grid-suffix(4.75,12)
     display: block
     float: none
     li
@@ -197,6 +201,7 @@ body
 #user-profile
   +grid-prefix(2,12)
   +grid(8,12)
+  +grid-suffix(2,12)
   .avatar
     float: left
     margin-right: 15px
@@ -225,10 +230,12 @@ body
 #search-page
   +grid-prefix(2,12)
   +grid(8,12)
+  +grid-suffix(2,12)
 
 #about
   +grid-prefix(3,12)
   +grid(6,12)
+  +grid-suffix(3,12)
   line-height: 1.4em
   div
     margin-top: 30px
