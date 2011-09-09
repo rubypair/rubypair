@@ -1,10 +1,11 @@
+- pres = UserPresenter.new(user)
 %li.user
   .user-image
     %a{href: user_path(user)}
-      = gravatar_image(user)
+      = image_tag pres.gravatar_image_url, class: :gravatar
       %span.magnifying-glass
   .user-info
-    %h4.user-name= user.name
-    %h4.github-login= github_url(user)
-    - if user.twitter
-      %h4.twitter-handle= twitter_url(user)
+    %h4.user-name= pres.name
+    %h4.github-login= link_to pres.github_login, pres.github_link
+    - if pres.display_twitter?
+      %h4.twitter-handle= link_to pres.twitter, pres.twitter_link
