@@ -11,18 +11,18 @@
       %label
         Pairing preference
       %span.value= pres.pairing_preference
-    - if pres.display_location?
+    - pres.display_location do |loc|
       %li.location
         %label Location
-        %span.value= pres.location
-    - if pres.display_email?
+        %span.value= loc
+    - pres.display_email do |email|
       %li.email
         %label E-mail
-        %span.value= mail_to pres.email, pres.email, encode: "javascript"
-    - if pres.display_twitter?
+        %span.value= mail_to email, email, encode: "javascript"
+    - pres.display_twitter do |handle, link|
       %li.twitter
         %label Twitter
-        %span.value= link_to pres.twitter, pres.twitter_link
+        %span.value= link_to handle, link
     %li.interests
       %label Interests
       %span.value.lengthy= pres.interest_links

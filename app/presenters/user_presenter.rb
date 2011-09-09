@@ -14,8 +14,8 @@ class UserPresenter < SimpleDelegator
     end
   end
 
-  def display_twitter?
-    twitter && twitter != ""
+  def display_twitter
+    yield(twitter, twitter_link) if twitter && twitter != ""
   end
 
   def twitter_link
@@ -26,12 +26,12 @@ class UserPresenter < SimpleDelegator
     "http://github.com/#{github_login}"
   end
 
-  def display_location?
-    location && location != ""
+  def display_location
+    yield(location) if location && location != ""
   end
 
-  def display_email?
-    email && email != ""
+  def display_email
+    yield(email) if email && email != ""
   end
 
   def gravatar_image_url(size = 80)
