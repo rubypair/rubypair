@@ -27,24 +27,12 @@ class UserPresenter
     end
   end
 
-  def display_twitter
-    yield(twitter, twitter_link) if twitter && twitter != ""
-  end
-
   def twitter_link
     "http://twitter.com/#{twitter}"
   end
 
   def github_link
     "http://github.com/#{github_login}"
-  end
-
-  def display_location
-    yield(location) if location && location != ""
-  end
-
-  def display_email
-    yield(email) if email && email != ""
   end
 
   def gravatar_image_url(size = 80)

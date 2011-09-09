@@ -7,5 +7,5 @@
     .user-info
       %h4.user-name= name
       %h4.github-login= link_to github_login, github_link
-      - display_twitter do |handle, link|
-        %h4.twitter-handle= link_to handle, link
+      - if twitter.present?
+        %h4.twitter-handle= link_to twitter, twitter_link
