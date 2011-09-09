@@ -3,36 +3,35 @@ require 'delegate'
 class UserPresenter < SimpleDelegator
   def initialize(user)
     super user
-    @decorated = user
   end
 
   def pairing_preference
-    case @decorated.remote_local_preference
+    case remote_local_preference
     when "Both"
       "Local or Remote"
     else
-      @decorated.remote_local_preference
+      remote_local_preference
     end
   end
 
   def display_twitter?
-    @decorated.twitter && @decorated.twitter != ""
+    twitter && twitter != ""
   end
 
   def twitter_link
-    "http://twitter.com/#{@decorated.twitter}"
+    "http://twitter.com/#{twitter}"
   end
 
   def github_link
-    "href='http://github.com/#{@decorated.github_login}"
+    "href='http://github.com/#{github_login}"
   end
 
   def display_location?
-    @decorated.location && @decorated.location != ""
+    location && location != ""
   end
 
   def display_email?
-    @decorated.email && @decorated.email != ""
+    email && email != ""
   end
 
   def gravatar_image_url(size = 80)
