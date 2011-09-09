@@ -17,6 +17,7 @@ end
 gem 'haml'
 gem 'jquery-rails'
 gem 'omniauth'
+gem 'faraday'
 
 group :development, :test do
   gem "rspec-rails"
@@ -28,4 +29,7 @@ group :test do
   gem "factory_girl_rails"
   gem 'database_cleaner'
   gem "capybara"
+
+  gem "vcr"
+  gem "fakeweb"
 end

@@ -2,6 +2,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require "rspec/rails"
 require "capybara/rspec"
+require "vcr"
 
 OmniAuth.config.test_mode = true
 OmniAuth.config.mock_auth[:default] = {
@@ -11,7 +12,7 @@ OmniAuth.config.mock_auth[:default] = {
     'urls' => {
       'GitHub' => "http://github.com/foobar",
       'Blog' => "http://foobar.tumblr.com",
-    }    
+    }
   },
   'extra' => {
     'user_hash' => {
@@ -37,6 +38,12 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-  
+
   config.include AuthMacros
+end
+
+VCR.config do |c|
+  c.cassette_library_dir     = 'spec/cassettes'
+  c.stub_with                :fakeweb
+  c.default_cassette_options = { :record => :new_episodes }
 end

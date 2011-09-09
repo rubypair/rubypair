@@ -1,0 +1,57 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/geocode/json?sensor=false&address=Edinburgh%2C%20UK
+    body: !!null 
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Fri, 09 Sep 2011 09:58:30 GMT
+      expires:
+      - Sat, 10 Sep 2011 09:58:30 GMT
+      cache-control:
+      - public, max-age=86400
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+    body: ! "{\n   \"results\" : [\n      {\n         \"address_components\" : [\n
+      \           {\n               \"long_name\" : \"Edinburgh\",\n               \"short_name\"
+      : \"Edinburgh\",\n               \"types\" : [ \"locality\", \"political\" ]\n
+      \           },\n            {\n               \"long_name\" : \"Edinburgh\",\n
+      \              \"short_name\" : \"Edinburgh\",\n               \"types\" : [
+      \"administrative_area_level_3\", \"political\" ]\n            },\n            {\n
+      \              \"long_name\" : \"City of Edinburgh\",\n               \"short_name\"
+      : \"City of Edinburgh\",\n               \"types\" : [ \"administrative_area_level_2\",
+      \"political\" ]\n            },\n            {\n               \"long_name\"
+      : \"Scotland\",\n               \"short_name\" : \"Scotland\",\n               \"types\"
+      : [ \"administrative_area_level_1\", \"political\" ]\n            },\n            {\n
+      \              \"long_name\" : \"United Kingdom\",\n               \"short_name\"
+      : \"GB\",\n               \"types\" : [ \"country\", \"political\" ]\n            }\n
+      \        ],\n         \"formatted_address\" : \"Edinburgh, City of Edinburgh,
+      UK\",\n         \"geometry\" : {\n            \"bounds\" : {\n               \"northeast\"
+      : {\n                  \"lat\" : 55.9916620,\n                  \"lng\" : -3.0775050\n
+      \              },\n               \"southwest\" : {\n                  \"lat\"
+      : 55.8947290,\n                  \"lng\" : -3.32851190\n               }\n            },\n
+      \           \"location\" : {\n               \"lat\" : 55.95017550,\n               \"lng\"
+      : -3.18753590\n            },\n            \"location_type\" : \"APPROXIMATE\",\n
+      \           \"viewport\" : {\n               \"northeast\" : {\n                  \"lat\"
+      : 56.00012330,\n                  \"lng\" : -3.05947650\n               },\n
+      \              \"southwest\" : {\n                  \"lat\" : 55.90016319999999,\n
+      \                 \"lng\" : -3.31559530\n               }\n            }\n         },\n
+      \        \"types\" : [ \"locality\", \"political\" ]\n      }\n   ],\n   \"status\"
+      : \"OK\"\n}\n"
+    http_version: '1.1'
