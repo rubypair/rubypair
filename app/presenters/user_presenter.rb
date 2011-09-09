@@ -18,15 +18,6 @@ class UserPresenter
     @template.send(*args, &block)
   end
 
-  def pairing_preference
-    case remote_local_preference
-    when "Both"
-      "Local or Remote"
-    else
-      remote_local_preference
-    end
-  end
-
   def twitter_link
     "http://twitter.com/#{twitter}"
   end
@@ -52,6 +43,15 @@ class UserPresenter
 
   def link_to_search_term(term)
     "<a href='/search?query=#{term.split(' ' ).map{|x| x.strip}.join('+')}'>#{term}</a>"
+  end
+
+  def pairing_preference
+    case remote_local_preference
+    when "Both"
+      "Local or Remote"
+    else
+      remote_local_preference
+    end
   end
 
   def pairing_preference_options
