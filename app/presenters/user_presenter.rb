@@ -1,20 +1,6 @@
 require 'delegate'
 
 class UserPresenter < SimpleDelegator
-  def self.conditionally_display(fields)
-    Array(fields).each do |field|
-      eval <<-HERE
-        def display_#{field}?
-          @decorated.#{field} && @decorated.#{field}.to_s != ""
-        end
-
-        def field
-          @decorated.#{field}
-        end
-      HERE
-    end
-  end
-
   def initialize(user)
     super user
     @decorated = user
