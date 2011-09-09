@@ -1,8 +1,21 @@
-require 'delegate'
+require 'forwardable'
 
-class UserPresenter < SimpleDelegator
-  def initialize(user)
-    super user
+class UserPresenter
+  extend Forwardable
+
+  def_delegators :@user, :twitter, :github_login, :location, :email, :gravatar_id,
+    :name, :remote_local_preference, :interests
+
+  def initialize(user, template)
+    @user, @template = user, template
+  end
+
+  def render(&block)
+    instance_eval &block
+  end
+
+  def method_missing(*args, &block)
+    @template.send(*args, &block)
   end
 
   def pairing_preference

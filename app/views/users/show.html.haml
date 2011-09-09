@@ -1,28 +1,28 @@
-- pres = UserPresenter.new(@user)
-- content_for :title, "#{pres.github_login}'s profile"
+- UserPresenter.new(@user, self).render do
+  - content_for :title, "#{github_login}'s profile"
 
-#user-profile
-  = image_tag pres.gravatar_image_url, class: :avatar
+  #user-profile
+    = image_tag gravatar_image_url, class: :avatar
 
-  %h2= pres.name
+    %h2= name
 
-  %ul
-    %li.pairing-preference
-      %label
-        Pairing preference
-      %span.value= pres.pairing_preference
-    - pres.display_location do |loc|
-      %li.location
-        %label Location
-        %span.value= loc
-    - pres.display_email do |email|
-      %li.email
-        %label E-mail
-        %span.value= mail_to email, email, encode: "javascript"
-    - pres.display_twitter do |handle, link|
-      %li.twitter
-        %label Twitter
-        %span.value= link_to handle, link
-    %li.interests
-      %label Interests
-      %span.value.lengthy= pres.interest_links
+    %ul
+      %li.pairing-preference
+        %label
+          Pairing preference
+        %span.value= pairing_preference
+      - display_location do |loc|
+        %li.location
+          %label Location
+          %span.value= loc
+      - display_email do |email|
+        %li.email
+          %label E-mail
+          %span.value= mail_to email, email, encode: "javascript"
+      - display_twitter do |handle, link|
+        %li.twitter
+          %label Twitter
+          %span.value= link_to handle, link
+      %li.interests
+        %label Interests
+        %span.value.lengthy= interest_links

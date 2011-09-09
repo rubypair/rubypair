@@ -1,11 +1,11 @@
-- pres = UserPresenter.new(user)
-%li.user
-  .user-image
-    %a{href: user_path(user)}
-      = image_tag pres.gravatar_image_url, class: :gravatar
-      %span.magnifying-glass
-  .user-info
-    %h4.user-name= pres.name
-    %h4.github-login= link_to pres.github_login, pres.github_link
-    - pres.display_twitter do |handle, link|
-      %h4.twitter-handle= link_to handle, link
+- UserPresenter.new(user, self).render do
+  %li.user
+    .user-image
+      %a{href: user_path(user)}
+        = image_tag gravatar_image_url, class: :gravatar
+        %span.magnifying-glass
+    .user-info
+      %h4.user-name= name
+      %h4.github-login= link_to github_login, github_link
+      - display_twitter do |handle, link|
+        %h4.twitter-handle= link_to handle, link
