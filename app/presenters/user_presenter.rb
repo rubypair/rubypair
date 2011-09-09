@@ -23,7 +23,7 @@ class UserPresenter < SimpleDelegator
   end
 
   def github_link
-    "href='http://github.com/#{github_login}"
+    "http://github.com/#{github_login}"
   end
 
   def display_location?
