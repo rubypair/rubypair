@@ -2,24 +2,24 @@
 %html
   %head
     %title= yield(:title) + ' - RubyPair'
-    
+
     = stylesheet_link_tag :application
     = stylesheet_link_tag :'tagify-style'
     /[if IE]
       = stylesheet_link_tag :ie, media: 'screen, projection'
-      
+
     = javascript_include_tag :application
     = csrf_meta_tag
-    
+
     = yield :head
-    
+
   %body
     #wrapper
       #header
         #logo
           %a{href: '/'}
             = image_tag '/assets/logo.png'
-            
+
         - if current_user
           #menu
             %span= link_to 'My profile', edit_user_path(current_user)
@@ -28,10 +28,10 @@
         - else
           %a#signin{href: '/auth/github'}
             = image_tag '/assets/signin-button.png'
-            
+
       #container
         = yield
-        
+
       #footer
         %ul
           %li= link_to 'Home', '/'
