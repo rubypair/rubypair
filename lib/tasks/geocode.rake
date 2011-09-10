@@ -2,7 +2,7 @@ require 'geocoder'
 
 namespace :geocode do
   task :users => :environment do
-    puts "Key: . - skipped; G - geocoded;"
+    puts "Key: . - skipped (already done); G - geocoded;"
     $stdout.sync = true
 
     geocoder = Geocoder.new
