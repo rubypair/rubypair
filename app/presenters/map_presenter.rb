@@ -16,9 +16,7 @@ class MapPresenter
   # This is really expensive... should it be?
   def encode_markers
     locations = @users.map do |user|
-      if user.latlong.blank?
-        next
-      end
+      next unless user.latlong?
       user.latlong.join(",")
     end
 

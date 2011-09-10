@@ -7,7 +7,7 @@ namespace :geocode do
 
     geocoder = Geocoder.new
     User.all.each do |user|
-      unless user.blank?
+      if user.latlong?
         print "."
         next
       end
