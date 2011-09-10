@@ -45,23 +45,8 @@ class UserPresenter
     "<a href='/search?query=#{term.split(' ' ).map{|x| x.strip}.join('+')}'>#{term}</a>"
   end
 
-  def pairing_preference
-    case remote_local_preference
-    when "Both"
-      "Local or Remote"
-    else
-      remote_local_preference
-    end
-  end
-
-  def pairing_preference_options
-    User::REMOTE_LOCAL_PREFERENCES.map do |pref|
-      case pref
-      when "Both"
-        ["Local or Remote", pref]
-      else
-        [pref, pref]
-      end
-    end
+  # renamed because of user method name
+  def remote_local_preference_options
+    User::REMOTE_LOCAL_PREFERENCES
   end
 end

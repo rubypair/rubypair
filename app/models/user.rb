@@ -10,12 +10,12 @@ class User
   field :blog_url,                 type: String
   field :gravatar_id,              type: String
   field :location,                 type: String
-  field :remote_local_preference,  type: String, default: "Both"
+  field :remote_local_preference,  type: String, default: "Local or Remote"
   field :pairing_toolchain,        type: String
   field :interests,                type: String
   field :twitter,                  type: String
 
-  REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
+  REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Local or Remote"]
 
   fulltext_search_in :name, :github_login, :interests, :location
 
