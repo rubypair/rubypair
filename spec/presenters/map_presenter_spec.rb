@@ -5,6 +5,7 @@ describe MapPresenter do
   let(:users) do
     user = stub(:user)
     user.stub(:latlong).and_return([55.5,-3.0])
+    user.stub(:latlong?).and_return(true)
     [user]
    end
    subject { MapPresenter.new(users) }
