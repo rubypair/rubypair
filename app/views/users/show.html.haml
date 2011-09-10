@@ -1,30 +1,28 @@
-- content_for :title, "#{@user.github_login}'s profile"
+- UserPresenter.new(@user, self).render do
+  - content_for :title, "#{github_login}'s profile"
 
-#user-profile
-  = gravatar_image @user, :avatar
+  #user-profile
+    = image_tag gravatar_image_url, class: :avatar
 
-  %h2= @user.name
+    %h2= name
 
-  %ul
-    %li.pairing-preference
-      %label
-        Pairing preference
-      %span.value= monkey_slap_preferences @user.remote_local_preference
-    - if @user.location.present?
-      %li.location
-        %label Location
-        %span.value= @user.location
-    - if @user.email.present?
-      %li.email
-        %label E-mail
-        %span.value= mail_to @user.email, @user.email, encode: "javascript"
-    - if @user.twitter.present?
-      %li.twitter
-        %label Twitter
-        %span.value= twitter_url(@user)
-    %li.interests
-      %label Interests
-      - if @user.interests.present?
-        %span.value.lengthy= @user.interests.split(",").map { |term| link_terms_to_search(term) }.join(", ").html_safe
-      - else
-        %span.value No interests. So sad...
+    %ul
+      %li.pairing-preference
+        %label
+          Pairing preference
+        %span.value= pairing_preference
+      - if location.present?
+        %li.location
+          %label Location
+          %span.value= location
+      - if email.present?
+        %li.email
+          %label E-mail
+          %span.value= mail_to email, email, encode: "javascript"
+      - if twitter.present?
+        %li.twitter
+          %label Twitter
+          %span.value= link_to twitter, twitter_link
+      %li.interests
+        %label Interests
+        %span.value.lengthy= interest_links
