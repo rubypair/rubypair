@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'spec_helper'
 require 'geocoder'
 
 describe Geocoder do
