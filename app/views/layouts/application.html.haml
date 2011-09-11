@@ -23,6 +23,8 @@
           #menu
             %span= link_to 'My profile', edit_user_path(current_user)
             %span= '/'
+            %span= link_to 'Near Me', near_me_users_path
+            %span= '/'
             %span= link_to 'Sign out', signout_path
         - else
           %a#signin{href: '/auth/github'}

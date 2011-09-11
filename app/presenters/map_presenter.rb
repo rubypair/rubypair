@@ -1,10 +1,15 @@
 class MapPresenter
+
+  attr_reader :users
+
   def initialize(users)
     @users = users
+    # This is really expensive... should it be?
+    @users.select! {|user| user.latlong? }
   end
 
   def url(width, height, centre=[0,0])
-    "#{base_url}?sensor=false&size=#{width}x#{height}&markers=#{encode_markers}&center=#{centre.join(",")}"
+    "#{base_url}?sensor=false&size=#{width}x#{height}&#{encode_markers}&center=#{centre.join(",")}"
   end
 
   private
@@ -16,11 +21,10 @@ class MapPresenter
   # This is really expensive... should it be?
   def encode_markers
     locations = @users.map do |user|
-      next unless user.latlong?
       user.latlong.join(",")
     end
 
-    return "size:tiny|color:0cE33052|#{locations.join("|")}"
+    return "markers=size:tiny|color:0cE33052|#{locations.join("|")}"
   end
 
 end

@@ -16,6 +16,8 @@ class User
   field :twitter,                  type: String
   field :latlong,                  type: Array
 
+  index [[:latlong, Mongo::GEO2D]]
+
   REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
 
   fulltext_search_in :name, :github_login, :interests, :location

@@ -10,6 +10,7 @@ Rubypair::Application.routes.draw do
   resources :users, :only => [:edit, :update, :show] do
     collection do
       get :map
+      get :near_me
     end
   end
 end

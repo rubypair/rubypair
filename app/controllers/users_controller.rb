@@ -1,9 +1,15 @@
 class UsersController < ApplicationController
-  before_filter :find_user,       :except =>  :map
-  before_filter :authorize_user!, :except => [:map, :show]
+  before_filter :find_user,       :except => [:map, :near_me]
+  before_filter :authorize_user!, :except => [:map, :near_me, :show]
+  before_filter :ensure_user!,    :only => [:near_me]
 
   def map
     users = User.all
+    @map = MapPresenter.new(users)
+  end
+
+  def near_me
+    users = UserModel.near(current_user.latlong)
     @map = MapPresenter.new(users)
   end
 
@@ -29,6 +35,13 @@ class UsersController < ApplicationController
 
     def authorize_user!
       if current_user != @user
+        render text: "Tsk tsk tsk!", status: 403
+        false
+      end
+    end
+
+    def ensure_user!
+      unless current_user
         render text: "Tsk tsk tsk!", status: 403
         false
       end

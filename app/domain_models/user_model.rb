@@ -8,6 +8,10 @@ class UserModel
     User.desc(:created_at).any_in(remote_local_preference: %w[Remote Both]).limit(5)
   end
 
+  def self.near(latlong)
+    User.where(local: true).near(latlong: latlong).limit(10)
+  end
+
   def self.fulltext_search(args = {})
     User.fulltext_search(args)
   end

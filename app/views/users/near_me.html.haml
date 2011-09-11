@@ -1,0 +1,5 @@
+- content_for :title, "Users Near Me"
+
+#user-map
+  // we need to sort this to display names etc, but for the moment this will do
+  = image_tag @map.url(620, 410, current_user.latlong)
