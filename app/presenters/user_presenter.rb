@@ -4,7 +4,7 @@ class UserPresenter
   extend Forwardable
 
   def_delegators :@user, :twitter, :github_login, :location, :email, :gravatar_id,
-    :name, :remote_local_preference, :interests
+    :name, :interests, :local, :remote
 
   def initialize(user, template)
     @user, @template = user, template
@@ -45,8 +45,15 @@ class UserPresenter
     "<a href='/search?query=#{term.split(' ' ).map{|x| x.strip}.join('+')}'>#{term}</a>"
   end
 
-  # renamed because of user method name
-  def remote_local_preference_options
-    User::REMOTE_LOCAL_PREFERENCES
+  def pairing_preference
+    if local && remote
+      "Local or Remote"
+    elsif local
+      "Local"
+    elsif remote
+      "Remote"
+    else
+      "Not Actively Pairing. So sad..."
+    end
   end
 end

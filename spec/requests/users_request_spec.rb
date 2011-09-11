@@ -33,12 +33,14 @@ describe UsersController do
 
       fill_in 'user_twitter', :with => 'new_twitter'
       fill_in 'user_interests', :with => 'new,interests'
-      select 'Local', :from => 'user_remote_local_preference'
+      check "Locally?"
+      uncheck "Remotely?"
 
       click_button 'Update User'
 
       user.reload
-      user.remote_local_preference.should == "Local"
+      user.remote.should == false
+      user.local.should == true
       user.twitter.should == 'new_twitter'
       user.interests.should == 'new,interests'
     end

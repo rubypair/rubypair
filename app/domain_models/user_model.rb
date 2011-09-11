@@ -1,11 +1,11 @@
 class UserModel
   def self.recent_local_users
-    User.desc(:created_at).any_in(remote_local_preference: ["Local", "Local or Remote"]).limit(5)
+    User.desc(:created_at).where(local: true).limit(5)
 
   end
 
   def self.recent_remote_users
-    User.desc(:created_at).any_in(remote_local_preference: ["Local", "Local or Remote"]).limit(5)
+    User.desc(:created_at).where(remote: true).limit(5)
   end
 
   def self.fulltext_search(args = {})
