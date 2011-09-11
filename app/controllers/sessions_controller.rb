@@ -5,6 +5,8 @@ class SessionsController < ApplicationController
     user_info = request.env['omniauth.auth']['user_info']
     user_hash = request.env['omniauth.auth']['extra']['user_hash']
 
+    geocoder = Geocoder.new
+
     login = user_hash['login']
     user = User.where(github_login: login).first
 
