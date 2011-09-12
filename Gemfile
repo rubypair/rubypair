@@ -18,9 +18,12 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'omniauth'
 
-group :development, :tests do
+group :development, :test do
   gem "rspec-rails"
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem "guard-rspec"
+  gem "awesome_print", :require => 'ap'
+  gem 'pry'
 end
 
 group :test do
