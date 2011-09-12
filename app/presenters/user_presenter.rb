@@ -4,7 +4,7 @@ class UserPresenter
   extend Forwardable
 
   def_delegators :@user, :twitter, :github_login, :location, :email, :gravatar_id,
-    :name, :remote_local_preference, :interests
+    :name, :remote_local_preference, :interests, :comments
 
   def initialize(user, template)
     @user, @template = user, template
@@ -63,5 +63,25 @@ class UserPresenter
         [pref, pref]
       end
     end
+  end
+  
+  def logged_user?
+    @user == current_user
+  end
+  
+  def reversed_comments
+    comments.reverse
+  end
+  
+  def any_comments?
+    not comments.empty?
+  end
+    
+  def first_name
+    name.split.first
+  end
+  
+  def render_partial(*args, &block)
+    @template.render *args, &block
   end
 end

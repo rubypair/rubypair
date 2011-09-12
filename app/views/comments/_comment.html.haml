@@ -1,9 +1,10 @@
-.comment-box
-  = gravatar_image(comment._author, :avatar, 40)
-  .body= comment.body
-  .author
-    - if edit_mode
-      .edit_actions
-        = link_to "delete", user_comment_path(comment.user, comment.id), :method => :delete
-    %span.date= time_ago_in_words(comment.created_at) + " ago"
-    %span.name= link_to comment._author.name, comment._author
+- CommentPresenter.new(comment, self).render do
+  .comment-box
+    = image_tag author_gravatar_image_url, class: :avatar
+    .body= body
+    .author
+      - if edit_mode
+        .edit_actions= link_to "delete", comment_path, :method => :delete
+
+      %span.date= created_time_ago
+      %span.name= link_to author_name, author_path

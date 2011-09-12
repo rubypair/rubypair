@@ -27,18 +27,23 @@
         %label Interests
         %span.value.lengthy= interest_links
 
-- if flash.key? :notice
-  %h3.notice= flash[:notice]
-- if flash.key? :alert
-  %h3.alert=  flash[:alert]
+  - if flash.key? :notice
+    %h3.notice= flash[:notice]
+  - if flash.key? :alert
+    %h3.alert=  flash[:alert]
 
-#user-comments
-  - if @user.comments.empty?
-    %h4= "No comments about #{@user.name.split.first} yet"
-  - else
-    %h4= "What they say about #{@user.name.split.first}:"
-    - @user.comments.reverse.each do |comment|
-      = render 'comments/comment', :comment => comment, edit_mode: current_user == @user
+  #user-comments
+    - if any_comments?
+      %h4= "What they say about #{first_name}:"
+      - reversed_comments.each do |comment|
+        = render_partial 'comments/comment', :comment => comment, edit_mode: logged_user?
 
-  - unless current_user == @user
-    = render 'comments/form', :comment => @user.comments.build
+    - else
+      %h4= "No comments about #{first_name} yet"
+
+    - unless logged_user?
+      - unless current_user
+        %h3.login_notice= link_to 'Log in with GitHub to post comments', '/auth/github'
+
+      - else
+        = render_partial 'comments/form', :comment => comments.build

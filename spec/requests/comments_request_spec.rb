@@ -8,6 +8,7 @@ describe CommentsController do
 
       visit '/signout'
       visit user_path(user)
+      page.should_not have_content('My Profile')
       page.should have_content('Log in with GitHub to post comments')
     end
     
