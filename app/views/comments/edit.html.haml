@@ -1,0 +1,6 @@
+- content_for :title, 'Edit Comment'
+
+= render 'form', comment: @comment, edit_mode: true
+
+%p.back-link
+  = link_to 'Go back', user_path(@user)

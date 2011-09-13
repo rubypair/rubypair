@@ -22,6 +22,10 @@ a
 @font-face
   font-family: 'Myriad Pro Italic'
   src: url('/fonts/MYRIADPRO-CONDIT.OTF') format('opentype')
+  
+@font-face
+  font-family: 'Myriad Pro Regular Italic'
+  src: url('/fonts/MYRIADPRO-REGULARIT.OTF') format('opentype')
 
 @font-face
   font-family: 'Myriad Pro'
@@ -232,30 +236,19 @@ body
 .alert, .notice
   +grid-prefix(2,12)
   +grid(8,12)
-  font-style: italic
+  font-family: 'Myriad Pro Regular Italic'
   text-align: center
   margin-top: 30px
   margin-bottom: -20px
   
 .login_notice
+  font-family: 'Myriad Pro Regular Italic'
   margin-top: 30px
 
 #user-comments
   +grid-prefix(3,12)
   +grid(7,12)
-  margin-top: 60px
-
-  .comment-form
-    .avatar
-      +grid-prefix(0)
-      +grid(1,7)
-      margin-left: -50px
-      width: 40px
-
-    padding-top: 10px
-    textarea
-      width: 100%
-      height: 80px
+  margin-top: 20px
 
   .comment-box
     width: 100%
@@ -267,7 +260,7 @@ body
       text-align: right
       padding: 5px
       .date
-        margin-right: 5px
+        //margin-right: 5px
       .edit_actions
         margin-left: 5px
         float: left
@@ -277,6 +270,46 @@ body
       margin-left: -50px
       margin-top: 10px
       width: 40px
+      
+  .comment-form
+    margin-top: 20px
+    .avatar
+      +grid-prefix(0)
+      +grid(1,7)
+      margin-left: -50px
+      width: 40px
+
+    padding-top: 10px
+    textarea
+      width: 100%
+      height: 80px
+      
+.form-errors
+  margin-bottom: 10px
+  font-family: 'Myriad Pro Regular Italic'
+  
+.field_with_errors
+  textarea, input
+    border: 1px solid $link-color
+      
+.comment-form-edit
+  +grid-prefix(2,12)
+  +grid(8,12)
+  +grid-suffix(2,12)
+  textarea
+    width: 100%
+    height: 80px
+  .author-edit-mode
+    margin-right: -8px
+    margin-top: 5px
+    text-align: right
+    
+.back-link
+  +grid-prefix(2,12)
+  +grid(8,12)
+  +grid-suffix(2,12)
+  text-align: center
+  margin-top: 30px
 
 #search-page
   +grid-prefix(2,12)

@@ -1,8 +1,21 @@
 - CommentPresenter.new(comment, self).render do
-  .comment-form
-    = image_tag current_user_gravatar_image_url(60), class: :avatar
-
+  = content_tag :div, class: (edit_mode ? 'comment-form-edit' : 'comment-form') do
     = form_for new_comment_path do |f|
-      = f.text_area :body
-      %br
-      .button.right= f.submit
+      - if errors.any?
+        .form-errors
+          - errors.full_messages.each do |message|
+            %h4= message
+
+      %div
+        - if not edit_mode
+          = image_tag current_user_gravatar_image_url(60), class: :avatar
+        = f.text_area :body
+
+      
+      .button.left= f.submit
+      
+      - if edit_mode
+        .author-edit-mode
+          %span.name= link_to author_name, author_path
+          wrote this
+          %span.date= created_time_ago

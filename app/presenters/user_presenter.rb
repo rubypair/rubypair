@@ -74,11 +74,15 @@ class UserPresenter
   end
   
   def any_comments?
-    not comments.empty?
+    not comments.count == 0
   end
     
   def first_name
     name.split.first
+  end
+  
+  def new_or_old_comment
+    @template.instance_variable_get('@comment') || comments.build
   end
   
   def render_partial(*args, &block)

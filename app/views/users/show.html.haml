@@ -33,17 +33,18 @@
     %h3.alert=  flash[:alert]
 
   #user-comments
-    - if any_comments?
-      %h4= "What they say about #{first_name}:"
-      - reversed_comments.each do |comment|
-        = render_partial 'comments/comment', :comment => comment, edit_mode: logged_user?
-
-    - else
-      %h4= "No comments about #{first_name} yet"
-
     - unless logged_user?
       - unless current_user
         %h3.login_notice= link_to 'Log in with GitHub to post comments', '/auth/github'
 
       - else
-        = render_partial 'comments/form', :comment => comments.build
+        = render_partial 'comments/form', comment: new_or_old_comment, edit_mode: false  
+  
+    %br
+    - if any_comments?
+      - reversed_comments.each do |comment|
+        - next if comment.new?
+        = render_partial 'comments/comment', comment: comment
+
+    - else
+      %h4{style: 'margin-top: 20px'}= "No comments about #{first_name} yet"

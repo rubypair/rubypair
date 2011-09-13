@@ -12,6 +12,6 @@ Rubypair::Application.routes.draw do
   root :to => "home#index"
 
   resources :users, :only => [:edit, :update, :show] do
-    resources :comments, :only => [:create, :destroy]
+    resources :comments
   end
 end
