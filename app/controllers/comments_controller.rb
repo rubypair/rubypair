@@ -1,10 +1,12 @@
 class CommentsController < ApplicationController
+  before_filter :find_user
+  before_filter :find_comment, except: [:create]
+  before_filter :authorize_user!, except: [:create]
+  
   helper_method :can_author_comment?
   
-  def create
-    @user = User.find(params[:user_id])
-    
-    if current_user
+  def create    
+    if current_user and current_user != @user
       @comment = Comment.new(params[:comment].merge(:author => current_user.id))
       
       if @comment.valid?
@@ -15,47 +17,42 @@ class CommentsController < ApplicationController
         render template: 'users/show'
       end
     else
-      redirect_to @user, :alert => 'You are not able to post comments!'
+      redirect_to @user, alert: 'You are not able to author comments!'
     end
   end
 
   def edit
-    @user = User.find(params[:user_id])
-    @comment = @user.comments.find(params[:id])
-    
-    unless can_author_comment? @comment
-      redirect_to root_url, :alert => 'You are not able to edit comments!'
-    end
   end
   
   def update
-    @user = User.find(params[:user_id])
-    @comment = @user.comments.find(params[:id])
-    
-    if not can_author_comment? @comment
-      redirect_to root_url, :alert => 'You are not able to edit comments!'
-    elsif @comment.update_attributes(params[:comment])
-      redirect_to @user, :notice => 'Comment updated.'
+    if @comment.update_attributes(params[:comment])
+      redirect_to @user, notice: 'Comment updated.'
     else
-      render :action => 'edit'
+      render action: 'edit'
     end
   end
 
   def destroy
-    @user = User.find(params[:user_id])
-    @comment = @user.comments.find(params[:id])
-    
-    if can_author_comment? @comment
-      @comment.delete
-      redirect_to @user, :notice => 'Comment deleted.'
-    else
-      redirect_to @user, :alert => 'You are not able to delete comments!'
-    end
+    @comment.delete
+    redirect_to @user, notice: 'Comment deleted.'
   end
   
   private
-  
-  def can_author_comment?(comment)
-    current_user == comment.user or current_user == comment._author
-  end
+    def find_user
+      @user = User.where("_id" => params[:user_id]).first
+    end
+    
+    def find_comment
+      @comment = @user.comments.find(params[:id])
+    end
+    
+    def authorize_user!
+      if not current_user or not can_author_comment?(@comment)
+        redirect_to @user, alert: 'You are not able to author comments!'
+      end
+    end
+    
+    def can_author_comment?(comment)
+      current_user == comment.user or current_user == comment._author
+    end
 end

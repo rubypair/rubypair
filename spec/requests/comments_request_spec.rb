@@ -20,8 +20,8 @@ describe CommentsController do
       post url_for([user1, user1.comments.build]), 'comment[body]' => comment
       get user_path(user1)
       
-      response.body.should include('You are not able to post comments')
       response.body.should_not include(comment)
+      response.body.should include('author comments')
     end
     
     it 'should forbid editing comments' do
@@ -35,8 +35,8 @@ describe CommentsController do
       put user_comment_path(user1, new_comment), 'comment[body]' => comment2
       get user_path(user1)
       
-      response.body.should include('You are not able to edit comments')
       response.body.should_not include(comment2)
+      response.body.should include('author comments')
     end
     
     it 'should forbid deleting comments' do
@@ -48,8 +48,8 @@ describe CommentsController do
       delete user_comment_path(user1, new_comment)
       get user_path(user1)
       
-      response.body.should include('You are not able to delete comments')
       response.body.should include(comment)
+      response.body.should include('author comments')
     end
   end
   
