@@ -10,9 +10,7 @@
         - if not edit_mode
           = image_tag current_user_gravatar_image_url(60), class: :avatar
         = f.text_area :body
-
-      
-      .button.left= f.submit
+        .button= f.submit
       
       - if edit_mode
         .author-edit-mode

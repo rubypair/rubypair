@@ -241,9 +241,14 @@ body
   margin-top: 30px
   margin-bottom: -20px
   
-.login_notice
+.login-notice
   font-family: 'Myriad Pro Regular Italic'
-  margin-top: 30px
+  margin-top: 20px
+  margin-left: 15px
+  
+.comments-notice
+  margin-left: 15px
+  margin-top: 20px
 
 #user-comments
   +grid-prefix(3,12)
@@ -251,38 +256,47 @@ body
   margin-top: 20px
 
   .comment-box
-    width: 100%
+    width: 520px
     margin: 10px 0
     .body
-      padding: 10px
-      +border-radius(5px, 5px)
+      text-align: justify
+      padding: 10px 5px 10px 10px
+      margin-left: 5px
     .author
       text-align: right
-      padding: 5px
+      margin-left: 15px
+      margin-right: 5px
       .date
         //margin-right: 5px
       .edit_actions
-        margin-left: 5px
         float: left
     .avatar
       +grid-prefix(0)
       +grid(1, 7)
-      margin-left: -50px
+      margin-left: -40px
       margin-top: 10px
       width: 40px
       
   .comment-form
     margin-top: 20px
+    width: 520px
+    
+    textarea
+      width: 480px
+      padding: 10px
+      height: 80px
+      margin-left: 4px
+    
     .avatar
       +grid-prefix(0)
-      +grid(1,7)
-      margin-left: -50px
+      +grid(1, 7)
+      margin-left: -40px
       width: 40px
+      
+    .button
+      margin-left: 12px
 
     padding-top: 10px
-    textarea
-      width: 100%
-      height: 80px
       
 .form-errors
   margin-bottom: 10px
@@ -303,6 +317,8 @@ body
     margin-right: -8px
     margin-top: 5px
     text-align: right
+  .button
+    float: left
     
 .back-link
   +grid-prefix(2,12)

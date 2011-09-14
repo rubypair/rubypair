@@ -35,7 +35,7 @@
   #user-comments
     - unless logged_user?
       - unless current_user
-        %h3.login_notice= link_to 'Log in with GitHub to post comments', '/auth/github'
+        %h3.login-notice= link_to 'Log in with GitHub to post comments', '/auth/github'
 
       - else
         = render_partial 'comments/form', comment: new_or_old_comment, edit_mode: false  
@@ -47,4 +47,4 @@
         = render_partial 'comments/comment', comment: comment
 
     - else
-      %h4{style: 'margin-top: 20px'}= "No comments about #{first_name} yet"
+      %h4.comments-notice= "No comments about #{first_name} yet"
