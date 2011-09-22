@@ -65,8 +65,12 @@ class UserPresenter
     end
   end
   
-  def logged_user?
-    @user == current_user
+  def logged_in?
+    not current_user.nil?
+  end
+  
+  def can_post_comments_here?
+    @user != current_user
   end
   
   def reversed_comments

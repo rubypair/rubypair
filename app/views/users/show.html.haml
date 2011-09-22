@@ -33,12 +33,11 @@
     %h3.alert=  flash[:alert]
 
   #user-comments
-    - unless logged_user?
-      - unless current_user
-        %h3.login-notice= link_to 'Log in with GitHub to post comments', '/auth/github'
-
-      - else
+    - if logged_in?
+      - if can_post_comments_here?
         = render_partial 'comments/form', comment: new_or_old_comment, edit_mode: false  
+    - else
+      %h3.login-notice= link_to 'Log in with GitHub to post comments', '/auth/github'
   
     %br
     - if any_comments?

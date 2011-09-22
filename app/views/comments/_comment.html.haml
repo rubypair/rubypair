@@ -3,10 +3,11 @@
     = image_tag author_gravatar_image_url, class: :avatar
     .body= body
     .author
-      - if can_edit?
-        .edit_actions
+      .edit_actions
+        - if can_edit?
           = link_to 'edit', edit_comment_path
           &nbsp;
+        - if can_delete?
           = link_to 'delete', comment_path, :method => :delete
 
       %span.date= created_time_ago

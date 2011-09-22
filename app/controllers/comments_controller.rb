@@ -3,7 +3,8 @@ class CommentsController < ApplicationController
   before_filter :find_comment, except: [:create]
   before_filter :authorize_user!, except: [:create]
   
-  helper_method :can_author_comment?
+  helper_method :can_delete_comment?
+  helper_method :can_edit_comment?
   
   def create    
     if current_user and current_user != @user
@@ -47,12 +48,22 @@ class CommentsController < ApplicationController
     end
     
     def authorize_user!
-      if not current_user or not can_author_comment?(@comment)
+      special_right = case params[:action].to_sym
+        when :update, :edit then can_edit_comment? @comment
+        when :destroy then can_delete_comment? @comment
+        else true
+      end
+      
+      if not (current_user and special_right)
         redirect_to @user, alert: 'You are not able to author comments!'
       end
     end
     
-    def can_author_comment?(comment)
+    def can_delete_comment?(comment)
       current_user == comment.user or current_user == comment._author
+    end
+    
+    def can_edit_comment?(comment)
+      current_user == comment._author
     end
 end

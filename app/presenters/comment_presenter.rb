@@ -25,8 +25,12 @@ class CommentPresenter
     end
   end
   
-  def can_edit?
+  def can_delete?
     user == current_user or _author == current_user
+  end
+  
+  def can_edit?
+    _author == current_user
   end
   
   def current_user_gravatar_image_url(size = 40)

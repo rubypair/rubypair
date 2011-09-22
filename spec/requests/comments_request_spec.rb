@@ -109,7 +109,7 @@ describe CommentsController do
       page.should_not have_content(comment)
     end
     
-    it 'should be able to edit a comment' do
+    it 'should not be able to edit a comment' do
       user1 = Factory(:user)
       user2 = Factory(:user)
       
@@ -120,10 +120,16 @@ describe CommentsController do
       user_comment1 = user1.comments.create body: comment1, author: user2.id
       
       visit edit_user_comment_path(user_comment1.user, user_comment1)
-      fill_in 'comment_body', with: comment2
-      click_button 'Update Comment'
-
-      page.should have_content(comment2)
+      current_path.should == user_path(user1)
+      
+      page.should_not have_content(comment2)
+      page.should have_content('author comments')
+      
+      put user_comment_path(user_comment1.user, user_comment1), 'comment[body]' => comment2
+      get user_path(user1)
+      
+      response.body.should_not include(comment2)
+      response.body.should include('author comments')
     end
     
     it 'should not be able to comment on his own page' do
