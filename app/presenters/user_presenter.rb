@@ -74,7 +74,13 @@ class UserPresenter
   end
   
   def reversed_comments
-    comments.reverse
+    comments.reverse.tap do |reversed|
+      class << reversed
+        def filtered_each
+          each{ |comment| yield comment unless comment.new? }
+        end
+      end
+    end
   end
   
   def any_comments?

@@ -41,8 +41,7 @@
   
     %br
     - if any_comments?
-      - reversed_comments.each do |comment|
-        - next if comment.new?
+      - reversed_comments.filtered_each do |comment|
         = render_partial 'comments/comment', comment: comment
 
     - else
