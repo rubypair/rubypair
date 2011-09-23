@@ -6,7 +6,6 @@ require 'app/models/new_user_provisioner'
 describe NewUserProvisioner do
   subject do
     OpenStruct.new.tap do |user|
-      user.extend NewUserProvisioner
       @fake_user_info = {
         'name' => 'jsmith',
         'email' => 'jsmith@gmail.com',
@@ -20,6 +19,7 @@ describe NewUserProvisioner do
         'gravatar_id' => 'other_email@gmail.com',
         'location' => 'someplace'
       }
+      user.extend NewUserProvisioner
       user.provision_with(@fake_user_info, @fake_extra_user_hash)
     end
   end
