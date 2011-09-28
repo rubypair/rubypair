@@ -1,13 +1,3 @@
-GIT
-  remote: https://github.com/chriseppstein/compass.git
-  revision: 22e2458b77519e8eb8463170c1a1fe4bab105f3e
-  branch: rails31
-  specs:
-    compass (0.12.0.alpha.0.22e2458)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -44,7 +34,7 @@ GEM
     archive-tar-minitar (0.5.2)
     arel (2.2.1)
     awesome_print (0.4.0)
-    bcrypt-ruby (3.0.0)
+    bcrypt-ruby (3.0.1)
     bson (1.3.1)
     bson_ext (1.3.1)
     builder (3.0.0)
@@ -57,7 +47,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.2.2)
       ffi (~> 1.0.6)
-    chunky_png (1.2.1)
+    chunky_png (1.2.5)
     coderay (0.9.8)
     coffee-rails (3.1.0)
       coffee-script (>= 2.2.0)
@@ -67,6 +57,10 @@ GEM
       execjs
     coffee-script-source (1.1.2)
     columnize (0.3.4)
+    compass (0.12.alpha.0)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     compass-960-plugin (0.10.4)
       compass (>= 0.10.0)
     database_cleaner (0.6.7)
@@ -163,7 +157,7 @@ GEM
       ruby_parser (>= 2.0.5)
       slop (~> 2.1.0)
     pyu-ruby-sasl (0.0.3.3)
-    rack (1.3.2)
+    rack (1.3.3)
     rack-cache (1.0.3)
       rack (>= 0.4)
     rack-mount (0.8.3)
@@ -262,7 +256,7 @@ DEPENDENCIES
   bson_ext
   capybara
   coffee-rails (= 3.1.0)
-  compass!
+  compass (= 0.12.alpha.0)
   compass-960-plugin
   database_cleaner
   factory_girl_rails
