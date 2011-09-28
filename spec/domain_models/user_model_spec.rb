@@ -1,5 +1,10 @@
-require 'spec_helper'
-require 'user_model'
+if ENV['LOAD_RAILS'] == '1'
+  require 'spec_helper'
+else
+  $LOAD_PATH << "."
+end
+
+require 'app/domain_models/user_model'
 
 class User; end
 

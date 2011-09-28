@@ -1,5 +1,6 @@
-require 'spec_helper'
-require 'user_presenter'
+$LOAD_PATH << "."
+
+require 'app/presenters/user_presenter'
 
 describe UserPresenter do
   describe "#pairing_preference" do
