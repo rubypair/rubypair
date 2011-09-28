@@ -11,7 +11,6 @@ describe SessionsController do
 
     User.count.should == 1
     user = User.last
-    user.github_login.should == user.github_login
 
     current_path.should == edit_user_path(user)
     page.should have_css('.edit-user')
