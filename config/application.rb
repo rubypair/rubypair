@@ -18,7 +18,7 @@ module Rubypair
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
-    config.autoload_paths += %W(#{Rails.root}/app/domain_models)
+    config.autoload_paths += %W(#{Rails.root}/app/models/user)
     config.autoload_paths += %W(#{Rails.root}/app/presenters)
 
     # Only load the plugins named here, in the order given (default is alphabetical).

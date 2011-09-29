@@ -1,7 +1,7 @@
 $LOAD_PATH << "."
 
 require 'ostruct'
-require 'app/models/new_user_provisioner'
+require 'app/models/user/new_user_provisioner'
 
 describe NewUserProvisioner do
   subject do
