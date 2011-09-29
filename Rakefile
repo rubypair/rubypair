@@ -60,3 +60,4 @@ RSpec::Core::RakeTask.new(:spec) do |t|
   t.rspec_opts = "-r spec_helper"
 end
 
+task default: :spec
