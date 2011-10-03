@@ -25,8 +25,8 @@ class UserModel
       normalize_interests_to_array(u.interests).each do |tag|
         hist[tag] += 1
       end
+      hist
     end
-    hist
   end
   
   private
@@ -34,4 +34,5 @@ class UserModel
     return [] if interests.blank?
     interests.downcase.split(/\s*,\s*,?\s*/)
   end
+
 end
