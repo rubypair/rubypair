@@ -21,16 +21,17 @@ class UserModel
   end
 
   def self.interest_histogram
-    User.all.map { |u|
-      u.interests.downcase if u.interests
-    }.flatten
-     .join(",")
-     .split(",")
-     .map(&:strip)
-     .reject { |m| m.nil? || m == "" }
-     .inject(Hash.new(0)) do |hist, v|
-       hist[v] += 1
-       hist
-     end
+    User.all.inject(Hash.new(0)) do |hist, u|
+      normalize_interests_to_array(u.interests).each do |tag|
+        hist[tag] += 1
+      end
+    end
+    hist
+  end
+  
+  private
+  def self.normalize_interests_to_array(interests)
+    return [] if interests.blank?
+    interests.downcase.split(/\s*,\s*,?\s*/)
   end
 end
