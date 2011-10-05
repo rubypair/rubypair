@@ -8,8 +8,8 @@ class UserModel
     User.desc(:created_at).any_in(remote_local_preference: %w[Remote Both]).limit(5)
   end
 
-  def self.fulltext_search(args = {})
-    User.fulltext_search(args)
+  def self.fulltext_search(query_string, opts = {})
+    User.fulltext_search(query_string, opts)
   end
 
   def self.tag_cloud(size = 20)
