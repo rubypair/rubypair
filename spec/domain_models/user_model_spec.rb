@@ -53,7 +53,7 @@ describe UserModel do
     end
   end
   
-  context "#full_text_search" do
+  context "#fulltext_search" do
     before do
       @user1 = Factory(:user, :interests => "foo, bar, baz", :name => "Mandrelbot")
       @user2 = Factory(:user, :interests => "fu, bar, buzz")
