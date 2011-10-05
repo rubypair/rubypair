@@ -52,28 +52,4 @@ describe UserModel do
       UserModel.tag_cloud(3).should == expected
     end
   end
-  
-  context "#fulltext_search" do
-    before do
-      @user1 = Factory(:user, :interests => "foo, bar, baz", :name => "Mandrelbot")
-      @user2 = Factory(:user, :interests => "fu, bar, buzz")
-    end
-    
-    it "should allow to search by term" do
-      UserModel.fulltext_search("buzz").should == [@user2]
-    end
-
-    it "should not bring back results for 2 char queries" do
-      UserModel.fulltext_search("fu").should == []
-    end
-
-    it "should search across searchable fiels (interests and name in this case)" do
-      UserModel.fulltext_search("foo").should == [@user2, @user1]
-    end
-
-    it "should allow for maximum results" do
-      UserModel.fulltext_search("foo", {:max_results => 1}).should == [@user2]
-    end
-    
-  end
 end

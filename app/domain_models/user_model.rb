@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string'
+
 class UserModel
   def self.recent_local_users
     User.desc(:created_at).any_in(remote_local_preference: %w[Local Both]).limit(5)
@@ -28,7 +30,7 @@ class UserModel
       hist
     end
   end
-  
+
   private
   def self.normalize_interests_to_array(interests)
     return [] if interests.blank?
