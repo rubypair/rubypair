@@ -5,7 +5,8 @@ Factory.define :user do |f|
   f.sequence(:blog_url){ |n| "http://foobar#{n}.tumblr.com" }
   f.sequence(:gravatar_id){ |n| n.to_s }
   f.location "Not in Portland, OR"
-  f.remote_local_preference "Both"
+  f.local true
+  f.remote true
   f.interests "ruby,rails,rubypair"
   f.sequence(:twitter){ |n| "foo#{n}" }
 end

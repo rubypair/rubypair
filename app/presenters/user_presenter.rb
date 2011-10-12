@@ -4,7 +4,7 @@ class UserPresenter
   extend Forwardable
 
   def_delegators :@user, :twitter, :github_login, :location, :email, :gravatar_id,
-    :name, :remote_local_preference, :interests
+    :name, :interests, :local, :remote
 
   def initialize(user, template)
     @user, @template = user, template
@@ -46,22 +46,14 @@ class UserPresenter
   end
 
   def pairing_preference
-    case remote_local_preference
-    when "Both"
+    if local && remote
       "Local or Remote"
+    elsif local
+      "Local"
+    elsif remote
+      "Remote"
     else
-      remote_local_preference
-    end
-  end
-
-  def pairing_preference_options
-    User::REMOTE_LOCAL_PREFERENCES.map do |pref|
-      case pref
-      when "Both"
-        ["Local or Remote", pref]
-      else
-        [pref, pref]
-      end
+      "Not Actively Pairing. So sad..."
     end
   end
 end
