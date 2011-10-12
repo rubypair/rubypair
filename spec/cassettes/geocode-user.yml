@@ -1,0 +1,54 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/geocode/json?sensor=false&address=Portland%2C%20OR
+    body: !!null 
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Fri, 09 Sep 2011 10:07:44 GMT
+      expires:
+      - Sat, 10 Sep 2011 10:07:44 GMT
+      cache-control:
+      - public, max-age=86400
+      vary:
+      - Accept-Language
+      server:
+      - mafe
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - SAMEORIGIN
+    body: ! "{\n   \"results\" : [\n      {\n         \"address_components\" : [\n
+      \           {\n               \"long_name\" : \"Portland\",\n               \"short_name\"
+      : \"Portland\",\n               \"types\" : [ \"locality\", \"political\" ]\n
+      \           },\n            {\n               \"long_name\" : \"Multnomah\",\n
+      \              \"short_name\" : \"Multnomah\",\n               \"types\" : [
+      \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+      \              \"long_name\" : \"Oregon\",\n               \"short_name\" :
+      \"OR\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+      ]\n            },\n            {\n               \"long_name\" : \"United States\",\n
+      \              \"short_name\" : \"US\",\n               \"types\" : [ \"country\",
+      \"political\" ]\n            }\n         ],\n         \"formatted_address\"
+      : \"Portland, OR, USA\",\n         \"geometry\" : {\n            \"bounds\"
+      : {\n               \"northeast\" : {\n                  \"lat\" : 45.6544240,\n
+      \                 \"lng\" : -122.4718490\n               },\n               \"southwest\"
+      : {\n                  \"lat\" : 45.4323930,\n                  \"lng\" : -122.8369950\n
+      \              }\n            },\n            \"location\" : {\n               \"lat\"
+      : 45.52345150,\n               \"lng\" : -122.67620710\n            },\n            \"location_type\"
+      : \"APPROXIMATE\",\n            \"viewport\" : {\n               \"northeast\"
+      : {\n                  \"lat\" : 45.64839210,\n                  \"lng\" : -122.42008830\n
+      \              },\n               \"southwest\" : {\n                  \"lat\"
+      : 45.39823280,\n                  \"lng\" : -122.93232590\n               }\n
+      \           }\n         },\n         \"types\" : [ \"locality\", \"political\"
+      ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: '1.1'

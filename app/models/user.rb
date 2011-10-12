@@ -14,6 +14,7 @@ class User
   field :pairing_toolchain,        type: String
   field :interests,                type: String
   field :twitter,                  type: String
+  field :latlong,                  type: Array
 
   REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
 

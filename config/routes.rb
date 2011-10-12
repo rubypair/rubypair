@@ -7,5 +7,9 @@ Rubypair::Application.routes.draw do
 
   root :to => "home#index"
 
-  resources :users, :only => [:edit, :update, :show]
+  resources :users, :only => [:edit, :update, :show] do
+    collection do
+      get :map
+    end
+  end
 end

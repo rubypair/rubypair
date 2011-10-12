@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
-  before_filter :find_user
-  before_filter :authorize_user!, :except => :show
+  before_filter :find_user,       :except =>  :map
+  before_filter :authorize_user!, :except => [:map, :show]
+
+  def map
+    users = User.all
+    @map = MapPresenter.new(users)
+  end
 
   def show
   end
