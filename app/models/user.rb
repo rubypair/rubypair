@@ -21,11 +21,7 @@ class User
 
   # This Normalizes twitter handles - strips and matches them
   def twitter=(handle)
-    if handle.strip =~ /^@(\w+)$/
-      super($1)
-    else
-      super handle.strip
-    end
+    super(handle.strip.sub(/@/, ''))
   end
 end
 
