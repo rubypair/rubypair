@@ -26,3 +26,23 @@
       %li.interests
         %label Interests
         %span.value.lengthy= interest_links
+
+  - if flash.key? :notice
+    %h3.notice= flash[:notice]
+  - if flash.key? :alert
+    %h3.alert=  flash[:alert]
+
+  #user-comments
+    - if logged_in?
+      - if can_post_comments_here?
+        = render_partial 'comments/form', comment: new_or_old_comment, edit_mode: false  
+    - else
+      %h3.login-notice= link_to 'Log in with GitHub to post comments', '/auth/github'
+  
+    %br
+    - if any_comments?
+      - reversed_comments.filtered_each do |comment|
+        = render_partial 'comments/comment', comment: comment
+
+    - else
+      %h4.comments-notice= "No comments about #{first_name} yet"
