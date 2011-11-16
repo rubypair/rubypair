@@ -8,4 +8,5 @@ Factory.define :user do |f|
   f.remote_local_preference "Both"
   f.interests "ruby,rails,rubypair"
   f.sequence(:twitter){ |n| "foo#{n}" }
+  f.last_available_time nil
 end

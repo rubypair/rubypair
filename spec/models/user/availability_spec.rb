@@ -3,19 +3,29 @@ $LOAD_PATH << "."
 require 'ostruct'
 
 module Availability
+  def available!
+    self.last_available_time = Time.now
+    save!
+  end
+
+  def unavailable!
+    self.last_available_time = nil
+    save!
+  end
 end
 
 describe Availability do
   subject do
     OpenStruct.new.tap do |user|
       user.extend Availability
+      user.stub(:save! => true)
     end
   end
 
   describe "When a user marks up as available" do
     before do
       Timecop.freeze
-      user.available!
+      subject.available!
     end
 
     after { Timecop.return }
@@ -26,7 +36,7 @@ describe Availability do
   describe "When a user marks up as unavailable" do
     before do
       subject.last_available_time = Time.now
-      user.unavailable!
+      subject.unavailable!
     end
 
     its(:last_available_time) { should be_nil }
