@@ -10,3 +10,7 @@ Factory.define :user do |f|
   f.sequence(:twitter){ |n| "foo#{n}" }
   f.last_available_time nil
 end
+
+Factory.define :available_user, parent: :user do |f|
+  f.last_available_time { Time.now }
+end
