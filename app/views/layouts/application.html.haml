@@ -21,6 +21,9 @@
 
         - if current_user
           #menu
+            - if current_user
+              %span= availability_link
+              %span= '/'
             %span= link_to 'My profile', edit_user_path(current_user)
             %span= '/'
             %span= link_to 'Sign out', signout_path

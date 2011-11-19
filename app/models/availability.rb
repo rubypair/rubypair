@@ -13,4 +13,3 @@ module Availability
     !!last_available_time
   end
 end
-

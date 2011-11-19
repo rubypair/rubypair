@@ -1,7 +1,6 @@
 class AvailabilitiesController < ApplicationController
   before_filter do
     @user = User.find(params[:user_id])
-    @user.extend Availability
   end
 
   def create

@@ -3,6 +3,8 @@ class User
   include Mongoid::Timestamps
   include Mongoid::FullTextSearch
 
+  include Availability
+
   REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
   RECENT_AVAILABILILTY_OFFSET = 2.hours
 

@@ -20,7 +20,6 @@ gem 'omniauth'
 
 group :development, :test do
   gem "rspec-rails"
-  gem 'ruby-debug19', :require => 'ruby-debug'
   gem "guard-rspec"
   gem "awesome_print", :require => 'ap'
   gem 'pry'

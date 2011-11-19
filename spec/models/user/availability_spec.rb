@@ -3,25 +3,22 @@ $LOAD_PATH << "."
 require 'ostruct'
 require 'timecop'
 
-require 'app/models/user/availability'
+require 'app/models/availability'
 
 describe Availability do
   subject do
     OpenStruct.new.tap do |user|
-      user.extend Availability
+      user.send(:extend, Availability)
       user.stub(:save! => true)
     end
   end
 
   describe "When a user marks up as available" do
     before do
-      Timecop.freeze
       subject.available!
     end
 
-    after { Timecop.return }
-
-    its(:last_available_time) { should == Time.now }
+    its(:last_available_time) { should_not be_nil }
   end
 
   describe "When a user marks up as unavailable" do

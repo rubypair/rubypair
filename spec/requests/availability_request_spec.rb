@@ -4,9 +4,7 @@ describe AvailabilitiesController do
 
   describe "#create" do
     let(:user) do
-      Factory(:user).tap do |u|
-        u.extend Availability
-      end
+      Factory(:user)
     end
 
     before do
@@ -24,9 +22,7 @@ describe AvailabilitiesController do
 
   describe "#destroy" do
     let (:user) do
-      Factory(:available_user).tap do |u|
-        u.extend Availability
-      end
+      Factory(:available_user)
     end
 
     before do
