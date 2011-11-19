@@ -8,5 +8,9 @@ module Availability
     self.last_available_time = nil
     save!
   end
+
+  def available?
+    !!last_available_time
+  end
 end
 
