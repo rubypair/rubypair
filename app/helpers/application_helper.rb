@@ -1,5 +1,6 @@
 module ApplicationHelper
   def availability_link
+    current_user.extend User::Availability
     link_text, link_method = if current_user.available?
       ["Available", :delete]
     else

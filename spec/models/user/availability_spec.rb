@@ -3,12 +3,13 @@ $LOAD_PATH << "."
 require 'ostruct'
 require 'timecop'
 
-require 'app/models/availability'
+require 'app/models/user/availability'
 
-describe Availability do
+
+describe User::Availability do
   subject do
     OpenStruct.new.tap do |user|
-      user.send(:extend, Availability)
+      user.extend User::Availability
       user.stub(:save! => true)
     end
   end
