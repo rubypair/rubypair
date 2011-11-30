@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AvailabilitiesController do
+describe User::AvailabilitiesController do
 
   describe "#create" do
     let(:user) do
