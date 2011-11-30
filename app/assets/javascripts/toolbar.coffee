@@ -1,6 +1,8 @@
 $(document).ready ->
-  $(".availability").bind "ajax:success", ->
-    this.value = if $(this).value == "Available"
-      "Unavailable"
-    else
-      "Available"
+  $(".available").bind "ajax:success", ->
+    $(this).fadeOut();
+    $(".unavailable").fadeIn();
+
+  $(".unavailable").bind "ajax:success", ->
+    $(this).fadeOut();
+    $(".available").fadeIn();
