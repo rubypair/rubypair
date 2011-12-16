@@ -6,7 +6,7 @@ class UserPresenter
   def_delegators :@user, :twitter, :github_login, :location, :email, :gravatar_id,
     :name, :remote_local_preference, :interests
 
-  TWO_HOURS_IN_SECONDS = 2 * 60 * 60
+  OFFSET_FOR_EARLIEST_AVAILABLE_TIME = 2 * 60 * 60
 
   def initialize(user, template)
     @user, @template = user, template
@@ -69,7 +69,9 @@ class UserPresenter
   end
 
   def available_now?
-    @user.last_available_time && @user.last_available_time >=
-    (Time.now - TWO_HOURS_IN_SECONDS)
+    earliest_available_time = Time.now - OFFSET_FOR_EARLIEST_AVAILABLE_TIME
+
+    @user.last_available_time &&
+      @user.last_available_time >= earliest_available_time
   end
 end
