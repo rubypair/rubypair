@@ -6,6 +6,8 @@ class UserPresenter
   def_delegators :@user, :twitter, :github_login, :location, :email, :gravatar_id,
     :name, :remote_local_preference, :interests
 
+  TWO_HOURS_IN_SECONDS = 2 * 60 * 60
+
   def initialize(user, template)
     @user, @template = user, template
   end
@@ -54,6 +56,7 @@ class UserPresenter
     end
   end
 
+
   def pairing_preference_options
     User::REMOTE_LOCAL_PREFERENCES.map do |pref|
       case pref
@@ -63,5 +66,10 @@ class UserPresenter
         [pref, pref]
       end
     end
+  end
+
+  def available_now?
+    @user.last_available_time && @user.last_available_time >=
+    (Time.now - TWO_HOURS_IN_SECONDS)
   end
 end

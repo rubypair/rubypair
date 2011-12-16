@@ -23,6 +23,9 @@
         %li.twitter
           %label Twitter
           %span.value= link_to twitter, twitter_link
+      - if available_now?
+        %li.available
+          %label Available
       %li.interests
         %label Interests
         %span.value.lengthy= interest_links
