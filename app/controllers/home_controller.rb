@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @newest_remote_users = UserModel.recent_remote_users
-    @newest_local_users = UserModel.recent_local_users
+    @newest_users = UserModel.newest_users
+    @available_users = UserModel.available_users
   end
 
   def search

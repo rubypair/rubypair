@@ -3,11 +3,11 @@
 = render 'layouts/searchbox'
 
 #newest_users
-  #newest_remote_users
-    %h2 New <span class="pairing-type">Remote</span>
-    %ul
-      = render @newest_remote_users
-  #newest_local_users
-    %h2 New <span class="pairing-type">In-Person</span>
-    %ul
-      = render @newest_local_users
+  %h2 New <span class="pairing-type">Users</span>
+  %ul
+    = render @newest_users
+
+#available_users
+  %h2 Available <span class="pairing-type">Users</span>
+  %ul
+    = render @available_users

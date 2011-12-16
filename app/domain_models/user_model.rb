@@ -1,13 +1,12 @@
 require 'active_support/core_ext/string'
 
 class UserModel
-  def self.recent_local_users
-    User.desc(:created_at).any_in(remote_local_preference: %w[Local Both]).limit(5)
-
+  def self.newest_users
+    User.desc(:created_at).limit(5)
   end
 
-  def self.recent_remote_users
-    User.desc(:created_at).any_in(remote_local_preference: %w[Remote Both]).limit(5)
+  def self.available_users
+    User::Availability.available_users
   end
 
   def self.fulltext_search(query_string, opts = {})
