@@ -4,7 +4,6 @@ class User
   include Mongoid::FullTextSearch
 
   REMOTE_LOCAL_PREFERENCES = ["Local", "Remote", "Both"]
-  RECENT_AVAILABILILTY_OFFSET = 2.hours
 
   field :name,                     type: String
   field :github_login,             type: String
@@ -18,9 +17,6 @@ class User
   field :interests,                type: String
   field :twitter,                  type: String
   field :last_available_time,      type: Time
-
-  scope :available, where(:last_available_time.ne => nil).desc(:last_available_time)
-  scope :available_recently, available.where(:last_available_time.gt => Time.now - RECENT_AVAILABILILTY_OFFSET)
 
   fulltext_search_in :name, :github_login, :interests, :location
 

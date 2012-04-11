@@ -5,8 +5,8 @@ class UserModel
     User.desc(:created_at).limit(5)
   end
 
-  def self.available_users
-    User::Availability.available_users
+  def self.recentest_available_users
+    User::Availability.currently_available.limit(5)
   end
 
   def self.fulltext_search(query_string, opts = {})
