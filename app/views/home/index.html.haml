@@ -2,12 +2,13 @@
 
 = render 'layouts/searchbox'
 
-#newest_users
-  %h2 New <span class="pairing-type">Users</span>
-  %ul
-    = render @newest_users
+#users
+  #new_users
+    %h2 New <span class="pairing-type">Users</span>
+    %ul
+      = render @newest_users
 
-#available_users
-  %h2 Available <span class="pairing-type">Users</span>
-  %ul
-    = render @available_users
+  #available_users
+    %h2 Available <span class="pairing-type">Users</span>
+    %ul
+      = render @available_users

@@ -5,8 +5,22 @@ class UserModel
     User.desc(:created_at).limit(5)
   end
 
-  def self.recentest_available_users
-    User::Availability.currently_available.limit(5)
+  def self.most_recent_available_users
+    UserModel.currently_available.limit(5)
+  end
+
+  def self.currently_available_offset
+    2.hours.ago
+  end
+
+  def self.ever_been_available
+    User.where(:last_available_time.ne => nil)
+        .desc(:last_available_time)
+  end
+
+  def self.currently_available
+    ever_been_available.
+         where(:last_available_time.gte => currently_available_offset)
   end
 
   def self.fulltext_search(query_string, opts = {})

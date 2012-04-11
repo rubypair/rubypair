@@ -32,16 +32,11 @@ describe User::Availability do
   end
 
   describe "When searching for available users" do
-    let(:available) {
-      Factory(:user, last_available_time: Time.now)
-    }
-
-    let(:never_available) {
-      Factory(:user, last_available_time: nil)
-    }
-
     it "should only find users with a available mark up time" do
       Timecop.freeze(Time.now) do
+        available = Factory(:user, last_available_time: Time.now)
+        never_available = Factory(:user, last_available_time: nil)
+
         result = User::Availability.ever_been_available
         result.should include(available)
         result.should_not include(never_available)
@@ -49,26 +44,32 @@ describe User::Availability do
     end
 
     context "who have marked available recently" do
-      let(:available_by_1_sec) {
-        Factory(:user, last_available_time: User::Availability.currently_available_offset + 1.second)
-      }
+      before do
+        Timecop.freeze(Time.now)
+        @available_by_1_sec =
+          Factory(:user, last_available_time: User::Availability.currently_available_offset + 1.second)
+        @available_exactly =
+          Factory(:user, last_available_time: User::Availability.currently_available_offset)
+        @not_available_by_1_sec =
+          Factory(:user, last_available_time: User::Availability.currently_available_offset - 1.second)
+      end
 
-      let(:available_exactly) {
-        Factory(:user, last_available_time: User::Availability.currently_available_offset)
-      }
-
-      let(:not_available_by_1_sec) {
-        Factory(:user, last_available_time: User::Availability.currently_available_offset - 1.second)
-      }
+      after do
+        Timecop.return
+      end
 
       it "should only find users with a markup time within the recent constraint" do
-        Timecop.freeze(Time.now) do
-          result = User::Availability.currently_available
-          result.should include(available_by_1_sec)
-          result.should include(available_exactly)
-          result.should include(available)
-          result.should_not include(not_available_by_1_sec)
-        end
+        result = User::Availability.currently_available
+        result.should include(@available_by_1_sec)
+        result.should include(@available_exactly)
+        result.should_not include(@not_available_by_1_sec)
+      end
+
+      it "should sort the available users by last_available_time descending" do
+        result = User::Availability.currently_available
+        result.length.should == 2
+        result[0].should == @available_by_1_sec
+        result[1].should == @available_exactly
       end
     end
   end
