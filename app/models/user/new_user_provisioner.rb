@@ -9,3 +9,6 @@ module NewUserProvisioner
     self.location = extra_user_hash['location']
   end
 end
+
+
+				

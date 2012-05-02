@@ -12,6 +12,7 @@ group :assets do
   gem 'uglifier'
   gem 'compass', "0.12.alpha.0"
   gem 'compass-960-plugin'
+  gem 'kaminari'
 end
 
 gem 'haml'

@@ -7,6 +7,9 @@
     %h2 New <span class="pairing-type">Users</span>
     %ul
       = render @newest_users
+    #paginator
+      = paginate @newest_users, :remote => true
+
 
   #available_users
     %h2 Available <span class="pairing-type">Users</span>
