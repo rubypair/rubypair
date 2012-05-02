@@ -1,0 +1,3 @@
+:plain  
+  $('#new_users ul').html("#{escape_javascript(render(@newest_users))}");
+  $('#paginator').html('#{escape_javascript(paginate(@newest_users, :remote => true))}');

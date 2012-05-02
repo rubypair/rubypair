@@ -2,9 +2,10 @@ require 'active_support/core_ext/string'
 
 class UserModel
   def self.newest_users
-    User.desc(:created_at).limit(5)
+    User.desc(:created_at)
+        .where(:created_at.gt => Time.now - 1.month)
   end
-
+  
   def self.most_recent_available_users
     UserModel.currently_available.limit(5)
   end
