@@ -5,7 +5,7 @@ require "capybara/rspec"
 
 OmniAuth.config.test_mode = true
 OmniAuth.config.mock_auth[:default] = {
-  'user_info' => {
+  'info' => {
     'name' => "Foo Bar",
     'email' => "foo@example.com",
     'urls' => {
@@ -14,7 +14,7 @@ OmniAuth.config.mock_auth[:default] = {
     }    
   },
   'extra' => {
-    'user_hash' => {
+    'raw_info' => {
       'login' => "foobar",
       'gravatar_id' => "foobar",
       'location' => "Not in Portland, OR"
