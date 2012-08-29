@@ -8,7 +8,7 @@ module AuthMacros
   def oauth_mock(user)
     data = {
       "extra" => {
-        "user_hash" => {
+        "raw_info" => {
           "login" => user.github_login,
           "gravatar_id" => user.gravatar_id,
           "location" => user.location
