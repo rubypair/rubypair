@@ -18,6 +18,8 @@
           = f.text_area :interests
         %p
           = f.submit
+      %p
+        = delete_my_account_link
       :javascript
         $('#user_interests').tagify({addTagPrompt: 'add tags'});
         $('form').submit( function() {

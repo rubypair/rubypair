@@ -17,6 +17,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    current_user.destroy
+    flash[:notice] = "kthxbai"
+    redirect_to root_path
+  end
+
   private
     def find_user
       @user = User.where("_id" => params[:id]).first

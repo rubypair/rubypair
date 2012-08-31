@@ -56,6 +56,10 @@ class UserPresenter
     end
   end
 
+  def delete_my_account_link
+      link_to "Delete my account", user_path(current_user), :method => :delete, :confirm => "Are you sure that you want to delete your account?"
+  end
+
 
   def pairing_preference_options
     User::REMOTE_LOCAL_PREFERENCES.map do |pref|
