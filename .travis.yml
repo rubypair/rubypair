@@ -1,5 +1,7 @@
 ---
-rvm: 1.9.2
+rvm: 
+  - 1.9.3
+  - 1.9.2
 notifications:
   disabled: true
 script: "bundle exec rspec spec"

@@ -16,7 +16,8 @@ end
 
 gem 'haml'
 gem 'jquery-rails'
-gem 'omniauth'
+gem 'omniauth', '~> 1.0'
+gem 'omniauth-github'
 
 group :development, :test do
   gem "rspec-rails"

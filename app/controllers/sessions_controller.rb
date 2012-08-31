@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def create
-    user_info = request.env['omniauth.auth']['user_info']
-    user_hash = request.env['omniauth.auth']['extra']['user_hash']
+    user_info = request.env['omniauth.auth']['info']
+    user_hash = request.env['omniauth.auth']['extra']['raw_info']
 
     user = find_or_create_from_oauth_data(user_info, user_hash)
 
