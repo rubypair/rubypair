@@ -25,7 +25,7 @@ This is an idea that came up during a break at a daylong session at Lone Star Ru
     cp config/app_config.yml.example config/app_config.yml
   </pre>
 
-4.  [Register your app with Github](http://github.com/account/applications/new) to make authentication work
+4.  [Register your app with Github](http://github.com/settings/applications/new) to make authentication work
   - Main URL for development may vary, mine is ```http://localhost:3000``` since I just use Webrick
   - Callback URL is ```http://localhost:3000/auth/github/callback``` adjust your accordingly.
   - Update your `config/app_config.yml` with values supplied from Github's OAUTH app registration
