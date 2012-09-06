@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe HomeController do
   it 'should display the most recent users' do
-    users = 2.times.map{ |n| Factory(:user) }
+    users = 2.times.map{ |n| FactoryGirl.create(:user) }
 
     visit '/'
 
@@ -17,8 +17,8 @@ describe HomeController do
 
   describe '#search' do
     it 'should perform a search by name' do
-      user1 = Factory(:user, :name => "John Smith")
-      user2 = Factory(:user, :name => "Jane Doe")
+      user1 = FactoryGirl.create(:user, :name => "John Smith")
+      user2 = FactoryGirl.create(:user, :name => "Jane Doe")
 
       visit '/search?query=john'
       page.should have_content(user1.name)
@@ -26,8 +26,8 @@ describe HomeController do
     end
 
     it 'should perform a search by github_login' do
-      user1 = Factory(:user, :github_login => "jsmith")
-      user2 = Factory(:user, :github_login => "jdoe")
+      user1 = FactoryGirl.create(:user, :github_login => "jsmith")
+      user2 = FactoryGirl.create(:user, :github_login => "jdoe")
 
       visit '/search?query=jsmith'
       page.should have_content(user1.name)
@@ -35,8 +35,8 @@ describe HomeController do
     end
 
     it 'should perform a search by location' do
-      user1 = Factory(:user, :location => "New York, NY")
-      user2 = Factory(:user, :location => "Los Angeles, CA")
+      user1 = FactoryGirl.create(:user, :location => "New York, NY")
+      user2 = FactoryGirl.create(:user, :location => "Los Angeles, CA")
 
       visit '/search?query=york'
       page.should have_content(user1.name)
@@ -44,8 +44,8 @@ describe HomeController do
     end
 
     it 'should perform a search by interests' do
-      user1 = Factory(:user, :interests => "ruby,rails")
-      user2 = Factory(:user, :interests => "java,grails")
+      user1 = FactoryGirl.create(:user, :interests => "ruby,rails")
+      user2 = FactoryGirl.create(:user, :interests => "java,grails")
 
       visit '/search?query=ruby'
       page.should have_content(user1.name)

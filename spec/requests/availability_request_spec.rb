@@ -4,7 +4,7 @@ describe User::AvailabilitiesController do
 
   describe "#create" do
     let(:user) do
-      u = Factory(:user)
+      u = FactoryGirl.create(:user)
       u.extend User::Availability
       u
     end
@@ -24,7 +24,7 @@ describe User::AvailabilitiesController do
 
   describe "#destroy" do
     let (:user) do
-      u = Factory(:available_user)
+      u = FactoryGirl.create(:available_user)
       u.extend User::Availability
       u
     end

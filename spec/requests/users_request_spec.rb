@@ -3,7 +3,7 @@ require 'spec_helper'
 describe UsersController do
   describe '#show' do
     it 'should display a user profile' do
-      user = Factory(:user)
+      user = FactoryGirl.create(:user)
 
       visit user_path(user)
 
@@ -17,7 +17,7 @@ describe UsersController do
 
   describe '#edit' do
     it 'should prevent a user to change another one\'s profile' do
-      user1, user2 = *(2.times.map{ |n| Factory(:user) })
+      user1, user2 = *(2.times.map{ |n| FactoryGirl.create(:user) })
       login user1
 
       visit edit_user_path(user2)
@@ -25,7 +25,7 @@ describe UsersController do
     end
 
     it 'should permit a user to update its profile' do
-      user = Factory(:user)
+      user = FactoryGirl.create(:user)
       login user
 
       visit edit_user_path(user)
