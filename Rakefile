@@ -52,7 +52,6 @@ require 'rspec/core/rake_task'
 desc "Non-rails specs"
 RSpec::Core::RakeTask.new(:snr) do |t|
   t.pattern = ["./spec/presenters/*_spec.rb", "./spec/domain_models/*_spec.rb", "./spec/models/user/*_spec.rb"]
-  t.skip_bundler = true
 end
 
 desc "All specs"
