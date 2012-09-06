@@ -7,10 +7,10 @@ gem 'mongoid_fulltext'
 gem 'bson_ext'
 
 group :assets do
-  gem 'sass-rails', "3.1.0"
-  gem 'coffee-rails', "3.1.0"
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
-  gem 'compass', "0.12.alpha.0"
+  gem 'compass'
   gem 'compass-960-plugin'
 end
 
