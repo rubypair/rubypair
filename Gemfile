@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.8'
 
-gem 'mongoid'
+gem 'mongoid', '~> 2.0'
 gem 'mongoid_fulltext'
 gem 'bson_ext'
 
