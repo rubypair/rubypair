@@ -5,3 +5,4 @@ rvm:
 notifications:
   disabled: true
 script: "bundle exec rspec spec"
+services: mongodb
