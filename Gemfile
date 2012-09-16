@@ -1,16 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.2.8'
 
-gem 'mongoid'
+gem 'mongoid', '~> 2.0'
 gem 'mongoid_fulltext'
 gem 'bson_ext'
 
 group :assets do
-  gem 'sass-rails', "3.1.0"
-  gem 'coffee-rails', "3.1.0"
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
-  gem 'compass', "0.12.alpha.0"
+  gem 'compass'
   gem 'compass-960-plugin'
 end
 

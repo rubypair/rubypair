@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-  let (:user) { Factory.build(:user) }
+  let (:user) { FactoryGirl.build(:user) }
 
   describe "twitter handle" do
     it "copes with a prefixed @-symbol" do

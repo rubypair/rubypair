@@ -56,8 +56,8 @@ describe UserModel do
   describe "When searching for available users" do
     it "should only find users with a available mark up time" do
       Timecop.freeze(Time.now) do
-        available = Factory(:user, last_available_time: Time.now)
-        never_available = Factory(:user, last_available_time: nil)
+        available = FactoryGirl.create(:user, last_available_time: Time.now)
+        never_available = FactoryGirl.create(:user, last_available_time: nil)
 
         result = UserModel.ever_been_available
         result.should include(available)
@@ -69,11 +69,11 @@ describe UserModel do
       before do
         Timecop.freeze(Time.now)
         @available_by_1_sec =
-          Factory(:user, last_available_time: UserModel.currently_available_offset + 1.second)
+          FactoryGirl.create(:user, last_available_time: UserModel.currently_available_offset + 1.second)
         @available_exactly =
-          Factory(:user, last_available_time: UserModel.currently_available_offset)
+          FactoryGirl.create(:user, last_available_time: UserModel.currently_available_offset)
         @not_available_by_1_sec =
-          Factory(:user, last_available_time: UserModel.currently_available_offset - 1.second)
+          FactoryGirl.create(:user, last_available_time: UserModel.currently_available_offset - 1.second)
       end
 
       after do
