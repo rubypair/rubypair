@@ -4,7 +4,7 @@ describe SessionsController do
   it 'should log in and create an unknown user' do
     User.count.should be_zero
 
-    user = Factory.build(:user, :github_login => 'jsmith')
+    user = FactoryGirl.build(:user, :github_login => 'jsmith')
     oauth_mock user
 
     visit '/auth/github'
@@ -17,7 +17,7 @@ describe SessionsController do
   end
 
   it 'should log in an existing user' do
-    user = Factory(:user)
+    user = FactoryGirl.create(:user)
     oauth_mock user
 
     visit '/auth/github'
@@ -25,7 +25,7 @@ describe SessionsController do
   end
 
   it 'should log out a user' do
-    user = Factory(:user)
+    user = FactoryGirl.create(:user)
     login user
 
     visit '/signout'

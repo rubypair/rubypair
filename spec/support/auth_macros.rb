@@ -1,6 +1,6 @@
 module AuthMacros
   def login(user = nil)
-    user ||= Factory(:user)
+    user ||= FactoryGirl.create(:user)
     oauth_mock user
     visit '/auth/github'
   end
