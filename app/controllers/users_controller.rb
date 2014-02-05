@@ -1,8 +1,10 @@
+require 'coderwall'
 class UsersController < ApplicationController
   before_filter :find_user
   before_filter :authorize_user!, :except => :show
 
   def show
+    @coderwall = CoderWall.achievements_of(User.find(params[:id]).github_login)
   end
 
   def edit

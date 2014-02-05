@@ -29,3 +29,8 @@
       %li.interests
         %label Interests
         %span.value.lengthy= interest_links
+
+%ul#coderwall
+  - @coderwall.each do |ach|
+    %li
+      = image_tag ach.badge
